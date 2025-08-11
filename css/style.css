@@ -28,7 +28,7 @@ html {
   background-color: transparent;
   font-size: 14px;
   color: var(--black);
-  font-family: "geller-headline", serif;
+  font-family: "Noto Serif JP", serif;
   font-weight: 400;
   font-style: italic;
   scroll-behavior: smooth;
@@ -45,12 +45,13 @@ a:hover {
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 55px;
+  letter-spacing: -3px;
 }
 
 p {
-  line-height: 200%;
-  font-family: "Noto Sans JP", sans-serif;
+  line-height: 180%;
+  font-family: "Noto Sans JP", san-serif;
 }
 
 img {
@@ -81,6 +82,16 @@ img {
   opacity: 0.7;
   transform: scale(1.5);
   animation: bg 1.1s ease forwards;
+}
+.header__bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--black);
+  opacity: 0.15;
 }
 .header__inner {
   text-align: right;
@@ -366,6 +377,7 @@ img {
   top: 0;
   right: 60px;
   z-index: 999;
+  animation: rotateAnimation 15s linear infinite;
 }
 @media screen and (max-width: 930px) {
   .about__inner__img-deco {
@@ -381,6 +393,14 @@ img {
 @media screen and (max-width: 480px) {
   .about__inner__img-deco {
     right: 3%;
+  }
+}
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 .about__inner-txt {
@@ -607,6 +627,11 @@ img {
     text-align: center;
   }
 }
+@media screen and (max-width: 1070px) {
+  .works__inner h2 {
+    padding-top: 130px;
+  }
+}
 @media screen and (max-width: 767px) {
   .works__inner h2 {
     padding-top: 130px;
@@ -621,10 +646,15 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: first baseline;
-  padding: 50px 0 200px;
+  padding: 25px 0 200px;
 }
 .works__inner-list li {
   padding: 0;
+}
+@media screen and (max-width: 1070px) {
+  .works__inner-list {
+    padding: 25px 0 200px;
+  }
 }
 @media screen and (max-width: 767px) {
   .works__inner-list {
@@ -714,6 +744,7 @@ img {
 }
 .works__inner .swiper-wrapper {
   transition-timing-function: linear;
+  cursor: pointer;
 }
 .works__inner .arrow {
   position: relative;
@@ -789,7 +820,10 @@ img {
   }
 }
 .modal__content-inner {
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 7% 5%; /* モーダル内の余白を設定 */
+  overflow: auto;
 }
 @media screen and (max-width: 650px) {
   .modal__content-inner {
@@ -815,21 +849,22 @@ img {
   }
 }
 .modal__content-nmb > p {
-  font-size: 18px;
-  padding: 6px 0 0 32px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 20px;
+  padding: 4px 0 0 30px;
   position: relative;
   z-index: 2;
 }
 @media screen and (max-width: 1100px) {
   .modal__content-nmb > p {
-    font-size: 15px;
-    padding: 4px 0 0 29px;
+    font-size: 17px;
+    padding: 1px 0 0 30px;
   }
 }
 @media screen and (max-width: 650px) {
   .modal__content-nmb > p {
-    font-size: 13px;
-    padding: 3px 0 0 26px;
+    font-size: 15px;
+    padding: 0 0 0 25px;
   }
 }
 .modal__content-nmb > p::before {
@@ -909,12 +944,14 @@ img {
   border-radius: 13px;
   padding: 0 10px;
   margin: 13px 0 7px;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .modal__content-item > div dd {
   text-align: left;
   float: left;
   padding: 0 10px;
   margin: 13px 0 7px;
+  font-family: "Noto Serif JP", serif;
 }
 @media screen and (max-width: 1100px) {
   .modal__content-item > div {
@@ -963,9 +1000,104 @@ img {
   }
 }
 
-#board {
+/* スクロール固定用のbody */
+body.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+#image {
   background-color: var(--orange);
   position: relative;
+}
+
+.image__inner {
+  padding-bottom: 180px;
+}
+.image__inner h2 {
+  color: var(--yellow);
+  padding: 180px 0 20px;
+}
+@media screen and (max-width: 930px) {
+  .image__inner h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .image__inner h2 {
+    padding-top: 130px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .image__inner h2 {
+    padding-top: 130px;
+  }
+}
+.image__inner-bg {
+  position: relative;
+  border: solid 1.5px var(--black);
+}
+.image__inner-bg img {
+  width: 1000px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image__inner-item01 {
+  position: absolute;
+  top: 25%;
+  right: -7%;
+}
+.image__inner-item01 img {
+  width: 380px;
+  transform: rotate(10deg);
+}
+.image__inner-item02 {
+  position: absolute;
+  top: 40%;
+  left: -10%;
+}
+.image__inner-item02 img {
+  width: 300px;
+}
+.image__inner-item03 {
+  position: absolute;
+  bottom: 13%;
+  left: 7%;
+}
+.image__inner-item03 img {
+  width: 270px;
+  transform: rotate(10deg);
+}
+.image__inner-item04 {
+  position: absolute;
+  top: 42%;
+  right: -4%;
+  animation: rotateAnimation 15s linear infinite;
+}
+.image__inner-item04 img {
+  width: 120px;
+}
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.image__inner-item05 {
+  position: absolute;
+  bottom: 17%;
+  right: -10%;
+  transform: rotate(-10deg);
+}
+.image__inner-item05 p {
+  font-family: "Sacramento", cursive;
+  font-size: 60px;
+  line-height: 120%;
+  border-bottom: solid 1px var(--black);
 }
 
 #footer {
@@ -1040,4 +1172,26 @@ img {
   .footer__inner-sns img {
     width: 40px;
   }
+}
+
+.copy {
+  background-color: var(--blue);
+  width: 100vw;
+  z-index: 3;
+}
+.copy p {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#copy {
+  background-color: var(--blue);
+  width: 100%;
+  position: relative;
+}
+#copy p {
+  color: var(--black);
+  font-size: 10px;
+  text-align: center;
+  padding: 7px 0;
 }/*# sourceMappingURL=style.css.map */
