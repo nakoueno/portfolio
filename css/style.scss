@@ -17,7 +17,7 @@ $breakpoint: (
 
 :root {
 	--orange: #DE714A;
-	--blue: #AABCBB;
+	--blue: #abc6c1;
 	--yellow: #FEF2AA;
 	--black: #2C2C2C;
 }
@@ -44,7 +44,11 @@ html {
 	font-weight: 400;
 	font-style: italic;
     scroll-behavior: smooth;
+	height: 100%;
+}
+body {
 	overflow-x: hidden;
+	margin: 0;
 }
 a {
     text-decoration: none;
@@ -116,7 +120,6 @@ img {
 		img {
 			width: 500px;
 			height: auto;
-			padding-bottom: 30px;
 			@include mq(sp) {
 				width: 350px;
 			}
@@ -125,17 +128,20 @@ img {
 			}
 		}
 		p {
-			font-family: "Sacramento", cursive;
-			font-size: 60px;
+			font-family: "franklin-gothic-atf", sans-serif;
+			font-weight: 300;
+			font-style: italic;
+			font-size: 27px;
 			color: var(--yellow);
 			line-height: 100%;
 			top: 7%;
 			right: 5%;
+			margin-top: 30px;
 			@include mq(sp) {
-				font-size: 50px;
+				font-size: 20px;
 			}
 			@media screen and (max-width:620px) {
-				font-size: 30px;
+				font-size: 15px;
 			}
 		}
 	}
@@ -154,81 +160,58 @@ img {
 
 // 【スクロールダウン】
 .container {
-	height: 300px;
-}
-.scrollbar-text {
-	display: inline-block;
 	position: absolute;
-	bottom: 0;
-	padding: 10px 12px 280px;
-	color: var(--yellow);
-	font-weight: bold;
-	font-size: 14px;
-	font-family: serif;
-	line-height: 1;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
-	right: 50px;
-	@include mq(sp) {
-		right: 30px;
+	bottom: 3%;
+	right: 5%;
+	img {
+		width: 130px;
+		animation: rotateAnimation 13s linear infinite;
+		@include mq(sp) {
+			width: 90px;
+		}
 	}
-	@media screen and (max-width:620px) {
-		right: 20px;
+	.scroll {
+		position: absolute;
+		bottom: 77%;
+		right: 58%;
+		@include mq(sp) {
+			right: 55%;
+		}
 	}
-}
-.scrollbar {
-	position: absolute;
-	right: 50px;
-	transform: translateX(-50px);
-	bottom: 1px;
-	@include mq(sp) {
-		right: 30px;
+	/* 矢印のアニメーション部分 */
+	.scroll::before {
+		animation: scroll 2s infinite;
+		border-bottom: 2px solid var(--yellow);
+		border-left: 2px solid var(--yellow);
+		content: "";
+		height: 20px;
+		left: 0;
+		margin: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 20px;
+		@include mq(sp) {
+			height: 13px;
+			width: 13px;
+		}
 	}
-	@media screen and (max-width:620px) {
-		right: 20px;
-	}
-}
-.scrollbar::after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 1px;
-	height: 270px;
-	background: var(--yellow);
-}
-.scrollbar::before {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: -4px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: #FFF0AA;
-	animation: circlemove 3s ease-in-out infinite,
-    cirlemovehide 3s ease-out infinite;
-}
-@keyframes circlemove {
-	0% {
-		bottom: 260px;
-	}
-	100% {
-		bottom: 0px;
-	}
-}
-@keyframes cirlemovehide {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	80% {
-		opacity: 0.9;
-	}
-	100% {
-		opacity: 0;
+	/* 矢印のアニメーション */
+	@keyframes scroll {
+		0% {
+			opacity: 0;
+			transform: rotate(-45deg) translate(0, 0);
+		}
+		40% {
+			opacity: 1;
+		}
+		80% {
+			opacity: 0;
+			transform: rotate(-45deg) translate(-20px, 20px);
+		}
+		100% {
+			opacity: 0;
+		}
 	}
 }
 // 【スクロールダウン】
@@ -410,6 +393,7 @@ img {
 	width: 60%;
 	height: auto;
 	animation: deco infinite 3s;
+	overflow-x: hidden;
 }
 @keyframes deco{
 	0%{rotate: 0deg;}
@@ -747,14 +731,16 @@ img {
 	border-radius: 13px;
 	@media screen and (max-width:1100px) {
 		width: 90%;
-		max-height: 90%;
-		// overflow: scroll;
+		height: 700px;
+		overflow-y: scroll;
 	}
 	&-inner {
 		max-width: 1100px;
 		margin: 0 auto;
 		padding: 7% 5%; /* モーダル内の余白を設定 */
-		overflow: auto;
+		@media screen and (max-width:1100px) {
+			padding: 2% 5%;
+		}
 		@media screen and (max-width:650px) {
 			padding: 13% 5%;
 		}
@@ -846,8 +832,7 @@ img {
 				margin-top: 20px;
 			}
 			dt {
-				float: left;
-				clear: left ;
+				clear: left;
 				width: 90px;
 				border: solid 1px var(--black);
 				border-radius: 13px;
@@ -861,51 +846,71 @@ img {
 				padding: 0 10px;
 				margin: 13px 0 7px;
 				font-family: "Noto Serif JP", serif;
+				@media screen and (max-width:530px) {
+					margin: 0 0 10px;
+				}
 			}
 			@media screen and (max-width:1100px) {
 				max-width: 70%;
 				text-align: center;
 				margin: 20px auto;
 			}
-			@media screen and (max-width:650px) {
+			@media screen and (max-width:750px) {
 				max-width: 100%;
 			}
 		}
 	}
-}
-
-/* モーダルを閉じるボタン（×）のスタイル */
-.close-button {
-	position: absolute;
-	top: 45px;
-	right: 20px;
-	cursor: pointer;
-	width: 55px;
-	height: 55px;
-	display: block;
-	span {
-		width: 55px;
-		height: 1px;
-		background: var(--black);
-		position: absolute;
-	}
-	span:nth-child(1) {
-		transform: rotate(45deg) translate(-1px, -1px);
-	}
-	span:nth-child(2) {
-		transform: rotate(-45deg) translate(1px, -1px);
-	}
-	@media screen and (max-width:650px) {
-		top: 30px;
-		right: 15px;
-		width: 30px;
-		height: 30px;
-		span {
-			width: 30px;
+	&-txt {
+		display: flex;
+		align-items: start;
+		@media screen and (max-width:530px) {
+			display: block;
 		}
 	}
 }
 
+    /* オーバーレイ */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    }
+
+
+/* モーダルを閉じるボタン（×）のスタイル */
+.close-button {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	width: 33px;
+	height: 33px;
+	display: block;
+	span {
+		width: 33px;
+		height: 1px;
+		background: var(--black);
+		position: absolute;
+		top: 50%;
+	}
+	span:nth-child(1) {
+		transform: rotate(45deg) translateY(-50%);
+	}
+	span:nth-child(2) {
+		transform: rotate(-45deg) translateY(-50%);
+	}
+	&:hover {
+		span {
+			opacity: 0.7;
+			transition: 0.3s;
+		}
+	}
+}
 /* スクロール固定用のbody */
 body.fixed {
     position: fixed;
@@ -919,6 +924,7 @@ body.fixed {
 #image {
 	background-color: var(--orange);
 	position: relative;
+	overflow-x: hidden;
 }
 .image__inner {
 	padding-bottom: 180px;

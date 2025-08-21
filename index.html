@@ -21,14 +21,18 @@
 			<div>
 				<img src="./images/logo.svg">
 				<p>
-				Tulips stand in light.<br>
-				their petals hold the sun’s warmth,<br>
-				quietly, hope blooms.<br>
+				Hajimemashite! UenoNako to moushimasu.<br>
+				Watashi no Portforio wo Mitekurete Arigatou.<br>
+				Kimi ha Do yatte koko ni Tadoritsuitano?<br>
+				Kore mo nanika no Goen Dane.<br>
+				Yukkuri shite itte!<br>
+				Soshite watashi no namae wo<br>
+				Oboete Kaettene!
 				</p>
 			</div>
 			<div class="container">
-				<div class="scrollbar-text"><span>scroll</span></div>
-				<div class="scrollbar"></div>
+				<div class="scroll"></div>
+				<img src="./images/scroll.png">
 			</div>
 		</div>
 	</header>
@@ -88,9 +92,12 @@
 		<section id="works">
 			<div class="works__inner">
 				<h2 class="wrapper" data-aos="fade-up">WORKS</h2>
+				<!-- オーバーレイ -->
+				<div id="overlay" class="overlay"></div>
+				<!-- workコンテンツ -->
 				<div class="swiper">
 					<ul class="works__inner-list swiper-wrapper">
-						<li id="openModalFlower" class="swiper-slide">
+						<li data-id="1" class="work swiper-slide">
 							<div class="works__inner-content">
 								<div class="works__inner-ttl">
 									<div class="works__inner-nmb">
@@ -98,7 +105,7 @@
 									</div>
 									<div class="works__inner-name">
 										<p><span>flower shop Blume</span></p>
-										<p>Cording  <br class="sp-only">[ HTML, CSS ]</p>
+										<p>Cording</p>
 									</div>
 								</div>
 								<div class="works__inner-img">
@@ -107,7 +114,7 @@
 								</div>
 							</div>
 						</li>
-						<li id="openModalAnchor" class="swiper-slide">
+						<li data-id="2" class="work swiper-slide">
 							<div class="works__inner-content">
 								<div class="works__inner-ttl">
 									<div class="works__inner-nmb">
@@ -115,7 +122,7 @@
 									</div>
 									<div class="works__inner-name">
 										<p><span>ANCHOR</span></p>
-										<p>Cording  <br class="sp-only">[ HTML, CSS, jQuery ]</p>
+										<p>Cording</p>
 									</div>
 								</div>
 								<div class="works__inner-img">
@@ -124,15 +131,15 @@
 								</div>
 							</div>
 						</li>
-						<li id="openModalFlowera" class="swiper-slide">
+						<li data-id="3" class="work swiper-slide">
 							<div class="works__inner-content">
 								<div class="works__inner-ttl">
 									<div class="works__inner-nmb">
 										<p>03</p>
 									</div>
 									<div class="works__inner-name">
-										<p><span>flower shop Blume</span></p>
-										<p>Cording  <br class="sp-only">[ HTML, CSS ]</p>
+										<p><span>Apparel LP</span></p>
+										<p>Design, Cording</p>
 									</div>
 								</div>
 								<div class="works__inner-img">
@@ -141,15 +148,15 @@
 								</div>
 							</div>
 						</li>
-						<li id="openModalAnchora" class="swiper-slide">
+						<li data-id="4" class="work swiper-slide">
 							<div class="works__inner-content">
 								<div class="works__inner-ttl">
 									<div class="works__inner-nmb">
 										<p>04</p>
 									</div>
 									<div class="works__inner-name">
-										<p><span>ANCHOR</span></p>
-										<p>Cording  <br class="sp-only">[ HTML, CSS, jQuery ]</p>
+										<p><span>Sauna YUZU</span></p>
+										<p>Design</p>
 									</div>
 								</div>
 								<div class="works__inner-img">
@@ -158,15 +165,15 @@
 								</div>
 							</div>
 						</li>
-						<li id="openModalFlowerb" class="swiper-slide">
+						<li data-id="5" class="work swiper-slide">
 							<div class="works__inner-content">
 								<div class="works__inner-ttl">
 									<div class="works__inner-nmb">
 										<p>05</p>
 									</div>
 									<div class="works__inner-name">
-										<p><span>flower shop Blume</span></p>
-										<p>Cording  <br class="sp-only">[ HTML, CSS ]</p>
+										<p><span>Cafe SWEET</span></p>
+										<p>Design</p>
 									</div>
 								</div>
 								<div class="works__inner-img">
@@ -175,7 +182,7 @@
 								</div>
 							</div>
 						</li>
-						<li id="openModalAnchorb" class="swiper-slide">
+						<li data-id="6" class="work swiper-slide">
 							<div class="works__inner-content">
 								<div class="works__inner-ttl">
 									<div class="works__inner-nmb">
@@ -183,7 +190,7 @@
 									</div>
 									<div class="works__inner-name">
 										<p><span>ANCHOR</span></p>
-										<p>Cording  <br class="sp-only">[ HTML, CSS, jQuery ]</p>
+										<p>Cording</p>
 									</div>
 								</div>
 								<div class="works__inner-img">
@@ -192,7 +199,7 @@
 								</div>
 							</div>
 						</li>
-						<li id="openModalFlowern" class="swiper-slide">
+						<li data-id="7" class="work swiper-slide">
 							<div class="works__inner-content">
 								<div class="works__inner-ttl">
 									<div class="works__inner-nmb">
@@ -200,7 +207,7 @@
 									</div>
 									<div class="works__inner-name">
 										<p><span>flower shop Blume</span></p>
-										<p>Cording  <br class="sp-only">[ HTML, CSS ]</p>
+										<p>Cording</p>
 									</div>
 								</div>
 								<div class="works__inner-img">
@@ -209,7 +216,7 @@
 								</div>
 							</div>
 						</li>
-						<li id="openModalAnchorn" class="swiper-slide">
+						<li data-id="8" class="work swiper-slide">
 							<div class="works__inner-content">
 								<div class="works__inner-ttl">
 									<div class="works__inner-nmb">
@@ -217,7 +224,7 @@
 									</div>
 									<div class="works__inner-name">
 										<p><span>ANCHOR</span></p>
-										<p>Cording  <br class="sp-only">[ HTML, CSS, jQuery ]</p>
+										<p>Cording</p>
 									</div>
 								</div>
 								<div class="works__inner-img">
@@ -231,17 +238,13 @@
 			</div>
 
 
-
-
 <!-- 【モーダル中身 - flower shop Blume】 -->
-			<div id="myModalFlower" class="modal">
+			<div class="modal" data-id="modal1">
 				<div class="modal__content">
-					<button id="closeModalFlower">
-						<div class="close-button">
-							<span></span>
-							<span></span>
-						</div>
-					</button>
+					<div class="close-button">
+						<span></span>
+						<span></span>
+					</div>
 					<div class="modal__content-inner">
 						<div class="modal__content-ttl">
 							<div class="modal__content-nmb">
@@ -257,19 +260,24 @@
 							</div>
 							<div>
 								<p>
-								フラワーショップを運営する企業のコーポレートサイトを
-								シンプルページで作成しました。
-								フラワーショップを運営する企業のコーポレートサイトを
-								シンプルページで作成しました。
+								フラワーショップを運営する企業のコーポレートサイトのコーディングを担当しました。
+								スライダーやGoogle mapを組み込み、シンプルページでもごちゃつかないようスッキリまとめることを心がけました。
 								</p>
-								<a href="https://nakoueno.github.io/portforio_ueno/portfotio_cording_ueno/"><u>https://nakoueno.github.io/portforio_ueno/</u></a>
+								<a href="https://nakoueno.github.io/flower_shop_blume/" target="_blank" rel="noopener noreferrer"><u>Open this page</u></a>
 								<dl>
-									<dt>制作範囲</dt>
-									<dd>Cording [ HTML, CSS, JavaScript ]</dd>
-									<dt>制作期間</dt>
-									<dd>2週間</dd>
-									<dt>想定金額</dt>
-									<dd>5万円～</dd>
+									<div class="modal__content-txt">
+										<dt>制作範囲</dt>
+										<dd>Design [ LP, Banner ]<br>
+										Cording [ HTML, CSS, JavaScript, JQuery ]</dd>
+									</div>
+									<div class="modal__content-txt">
+										<dt>制作期間</dt>
+										<dd>2週間</dd>
+									</div>
+									<div class="modal__content-txt">
+										<dt>想定金額</dt>
+										<dd>5万円～</dd>
+									</div>
 								</dl>
 							</div>
 						</div>
@@ -278,14 +286,12 @@
 			</div>
 <!-- 【モーダル中身 - flower shop Blume】 -->
 <!-- 【モーダル中身 - Anchor】 -->
-			<div id="myModalAnchor" class="modal">
+			<div class="modal" data-id="modal2">
 				<div class="modal__content">
-					<button id="closeModalAnchor">
-						<div  class="close-button">
-							<span></span>
-							<span></span>
-						</div>
-					</button>
+					<div class="close-button">
+						<span></span>
+						<span></span>
+					</div>
 					<div class="modal__content-inner">
 						<div class="modal__content-ttl">
 							<div class="modal__content-nmb">
@@ -301,19 +307,24 @@
 							</div>
 							<div>
 								<p>
-								フラワーショップを運営する企業のコーポレートサイトを
-								シンプルページで作成しました。
-								フラワーショップを運営する企業のコーポレートサイトを
-								シンプルページで作成しました。
+								建設会社のコーポレートサイトのコーディングを担当しました。
+								メニューバーの表示方法、背景の作り込みにこだわりました。
 								</p>
-								<a href="https://nakoueno.github.io/portforio_ueno/portfotio_cording_ueno/"><u>https://nakoueno.github.io/portforio_ueno/</u></a>
+								<a href="https://nakoueno.github.io/anchor_construction/" target="_blank" rel="noopener noreferrer"><u>Open this page</u></a>
 								<dl>
-									<dt>制作範囲</dt>
-									<dd>Cording [ HTML, CSS, JavaScript ]</dd>
-									<dt>制作期間</dt>
-									<dd>2週間</dd>
-									<dt>想定金額</dt>
-									<dd>5万円～</dd>
+									<div class="modal__content-txt">
+										<dt>制作範囲</dt>
+										<dd>Design [ LP, Banner ]<br>
+										Cording [ HTML, CSS, JavaScript, JQuery ]</dd>
+									</div>
+									<div class="modal__content-txt">
+										<dt>制作期間</dt>
+										<dd>2週間</dd>
+									</div>
+									<div class="modal__content-txt">
+										<dt>想定金額</dt>
+										<dd>5万円～</dd>
+									</div>
 								</dl>
 							</div>
 						</div>
@@ -321,6 +332,54 @@
 				</div>
 			</div>
 <!-- 【モーダル中身 - Anchor】 -->
+<!-- 【モーダル中身 - Apparel】 -->
+			<div class="modal" data-id="modal3">
+				<div class="modal__content">
+					<div class="close-button">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="modal__content-inner">
+						<div class="modal__content-ttl">
+							<div class="modal__content-nmb">
+								<p>03</p>
+							</div>
+							<div class="modal__content-name">
+								<p>Apparel LP</p>
+							</div>
+						</div>
+						<div class="modal__content-item">
+							<div>
+								<img src="./images/work_02.jpg">
+							</div>
+							<div>
+								<p>
+								アパレル企業のランディングページのデザイン、コーディングを担当しました。
+								非公開案件のため、画像・商品情報を差し替えて掲載しております。
+								スクロールすることで、女性らしい滑らかな動きをつけました。
+								</p>
+								<a href="https://nakoueno.github.io/anchor_construction/" target="_blank" rel="noopener noreferrer"><u>Open this page</u></a>
+								<dl>
+									<div class="modal__content-txt">
+										<dt>制作範囲</dt>
+										<dd>Design [ LP, Banner ]<br>
+										Cording [ HTML, CSS, JavaScript, JQuery ]</dd>
+									</div>
+									<div class="modal__content-txt">
+										<dt>制作期間</dt>
+										<dd>2週間</dd>
+									</div>
+									<div class="modal__content-txt">
+										<dt>想定金額</dt>
+										<dd>5万円～</dd>
+									</div>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- 【モーダル中身 - Apparel】 -->
 		</section>
 
 
@@ -334,25 +393,22 @@
 				<div class="image__inner-bg">
 					<img src="./images/bg_tulip.jpg">
 				</div>
-					<div class="image__inner-item01">
-						<img src="./images/image-item01.svg">
-					</div>
-					<div class="image__inner-item02">
-						<img src="./images/image-item02.jpg">
-					</div>
-					<div class="image__inner-item03">
-						<img src="./images/image-item02.jpg">
-					</div>
-					<div class="image__inner-item04">
-						<img src="./images/about_txt.png">
-					</div>
-					<div class="image__inner-item05">
-						<p>A fresh chapter begins.</p>
-						<p>　I bloom with every step.</p>
-					</div>
-				
-
-
+				<div class="image__inner-item01">
+					<img src="./images/image-item01.svg">
+				</div>
+				<div class="image__inner-item02">
+					<img src="./images/image-item02.jpg">
+				</div>
+				<div class="image__inner-item03">
+					<img src="./images/image-item02.jpg">
+				</div>
+				<div class="image__inner-item04">
+					<img src="./images/about_txt.png">
+				</div>
+				<div class="image__inner-item05">
+					<p>A fresh chapter begins.</p>
+					<p>　I bloom with every step.</p>
+				</div>
 			</div>
 		</section>
 

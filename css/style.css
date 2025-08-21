@@ -4,7 +4,7 @@
 -------------------- */
 :root {
   --orange: #DE714A;
-  --blue: #AABCBB;
+  --blue: #abc6c1;
   --yellow: #FEF2AA;
   --black: #2C2C2C;
 }
@@ -32,7 +32,12 @@ html {
   font-weight: 400;
   font-style: italic;
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
   overflow-x: hidden;
+  margin: 0;
 }
 
 a {
@@ -116,7 +121,6 @@ img {
 .header__inner img {
   width: 500px;
   height: auto;
-  padding-bottom: 30px;
 }
 @media screen and (max-width: 767px) {
   .header__inner img {
@@ -129,21 +133,24 @@ img {
   }
 }
 .header__inner p {
-  font-family: "Sacramento", cursive;
-  font-size: 60px;
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 27px;
   color: var(--yellow);
   line-height: 100%;
   top: 7%;
   right: 5%;
+  margin-top: 30px;
 }
 @media screen and (max-width: 767px) {
   .header__inner p {
-    font-size: 50px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 620px) {
   .header__inner p {
-    font-size: 30px;
+    font-size: 15px;
   }
 }
 
@@ -159,95 +166,67 @@ img {
   }
 }
 .container {
-  height: 300px;
-}
-
-.scrollbar-text {
-  display: inline-block;
   position: absolute;
-  bottom: 0;
-  padding: 10px 12px 280px;
-  color: var(--yellow);
-  font-weight: bold;
-  font-size: 14px;
-  font-family: serif;
-  line-height: 1;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  right: 50px;
+  bottom: 3%;
+  right: 5%;
+  /* 矢印のアニメーション部分 */
+  /* 矢印のアニメーション */
+}
+.container img {
+  width: 130px;
+  animation: rotateAnimation 13s linear infinite;
 }
 @media screen and (max-width: 767px) {
-  .scrollbar-text {
-    right: 30px;
+  .container img {
+    width: 90px;
   }
 }
-@media screen and (max-width: 620px) {
-  .scrollbar-text {
-    right: 20px;
-  }
-}
-
-.scrollbar {
+.container .scroll {
   position: absolute;
-  right: 50px;
-  transform: translateX(-50px);
-  bottom: 1px;
+  bottom: 77%;
+  right: 58%;
 }
 @media screen and (max-width: 767px) {
-  .scrollbar {
-    right: 30px;
+  .container .scroll {
+    right: 55%;
   }
 }
-@media screen and (max-width: 620px) {
-  .scrollbar {
-    right: 20px;
-  }
-}
-
-.scrollbar::after {
+.container .scroll::before {
+  animation: scroll 2s infinite;
+  border-bottom: 2px solid var(--yellow);
+  border-left: 2px solid var(--yellow);
   content: "";
-  position: absolute;
-  bottom: 0;
+  height: 20px;
   left: 0;
-  width: 1px;
-  height: 270px;
-  background: var(--yellow);
-}
-
-.scrollbar::before {
-  content: "";
+  margin: auto;
   position: absolute;
-  bottom: 0;
-  left: -4px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #FFF0AA;
-  animation: circlemove 3s ease-in-out infinite, cirlemovehide 3s ease-out infinite;
+  right: 0;
+  top: 0;
+  width: 20px;
 }
-
-@keyframes circlemove {
-  0% {
-    bottom: 260px;
-  }
-  100% {
-    bottom: 0px;
+@media screen and (max-width: 767px) {
+  .container .scroll::before {
+    height: 13px;
+    width: 13px;
   }
 }
-@keyframes cirlemovehide {
+@keyframes scroll {
   0% {
     opacity: 0;
+    transform: rotate(-45deg) translate(0, 0);
   }
-  50% {
+  40% {
     opacity: 1;
   }
   80% {
-    opacity: 0.9;
+    opacity: 0;
+    transform: rotate(-45deg) translate(-20px, 20px);
   }
   100% {
     opacity: 0;
   }
 }
+
 .ttl {
   position: relative;
   padding-top: 100vh;
@@ -429,6 +408,7 @@ img {
   width: 60%;
   height: auto;
   animation: deco infinite 3s;
+  overflow-x: hidden;
 }
 
 @keyframes deco {
@@ -816,14 +796,19 @@ img {
 @media screen and (max-width: 1100px) {
   .modal__content {
     width: 90%;
-    max-height: 90%;
+    height: 700px;
+    overflow-y: scroll;
   }
 }
 .modal__content-inner {
   max-width: 1100px;
   margin: 0 auto;
   padding: 7% 5%; /* モーダル内の余白を設定 */
-  overflow: auto;
+}
+@media screen and (max-width: 1100px) {
+  .modal__content-inner {
+    padding: 2% 5%;
+  }
 }
 @media screen and (max-width: 650px) {
   .modal__content-inner {
@@ -937,7 +922,6 @@ img {
   margin-top: 20px;
 }
 .modal__content-item > div dt {
-  float: left;
   clear: left;
   width: 90px;
   border: solid 1px var(--black);
@@ -953,6 +937,11 @@ img {
   margin: 13px 0 7px;
   font-family: "Noto Serif JP", serif;
 }
+@media screen and (max-width: 530px) {
+  .modal__content-item > div dd {
+    margin: 0 0 10px;
+  }
+}
 @media screen and (max-width: 1100px) {
   .modal__content-item > div {
     max-width: 70%;
@@ -960,44 +949,59 @@ img {
     margin: 20px auto;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .modal__content-item > div {
     max-width: 100%;
   }
+}
+.modal__content-txt {
+  display: flex;
+  align-items: start;
+}
+@media screen and (max-width: 530px) {
+  .modal__content-txt {
+    display: block;
+  }
+}
+
+/* オーバーレイ */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
 /* モーダルを閉じるボタン（×）のスタイル */
 .close-button {
   position: absolute;
-  top: 45px;
+  top: 20px;
   right: 20px;
   cursor: pointer;
-  width: 55px;
-  height: 55px;
+  width: 33px;
+  height: 33px;
   display: block;
 }
 .close-button span {
-  width: 55px;
+  width: 33px;
   height: 1px;
   background: var(--black);
   position: absolute;
+  top: 50%;
 }
 .close-button span:nth-child(1) {
-  transform: rotate(45deg) translate(-1px, -1px);
+  transform: rotate(45deg) translateY(-50%);
 }
 .close-button span:nth-child(2) {
-  transform: rotate(-45deg) translate(1px, -1px);
+  transform: rotate(-45deg) translateY(-50%);
 }
-@media screen and (max-width: 650px) {
-  .close-button {
-    top: 30px;
-    right: 15px;
-    width: 30px;
-    height: 30px;
-  }
-  .close-button span {
-    width: 30px;
-  }
+.close-button:hover span {
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
 /* スクロール固定用のbody */
@@ -1010,6 +1014,7 @@ body.fixed {
 #image {
   background-color: var(--orange);
   position: relative;
+  overflow-x: hidden;
 }
 
 .image__inner {
