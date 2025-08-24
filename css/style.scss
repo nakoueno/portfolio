@@ -55,7 +55,7 @@ a {
 }
 a:hover {
     opacity: 0.7;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 h2 {
 	font-size: 55px;
@@ -74,6 +74,22 @@ img {
 	@media screen and (max-width:1070px) {
 		padding: 0 5%;
 	}
+}
+
+/* スクロールバー全体 */
+::-webkit-scrollbar {
+    width: 10px; /* 垂直方向のスクロールバーの幅 */
+    height: 10px; /* 水平方向のスクロールバーの幅 */
+}
+/* スクロールバー背景 */
+::-webkit-scrollbar-track {
+    background: transparent;
+    // box-shadow: inset 0 0 2px #000;
+}
+/* スクロールバーつまみ */
+::-webkit-scrollbar-thumb {
+    background: #cecece;
+    border-radius: 35px;
 }
 
 
@@ -559,6 +575,10 @@ img {
 		padding: 25px 0 200px;
 		li {
 			padding: 0;
+			&:hover {
+				opacity: 0.7;
+				transition: 0.5s;
+			}
 		}
 		@media screen and (max-width:1070px) {
 			padding: 25px 0 200px;
@@ -710,10 +730,10 @@ img {
 	max-height: 80%; /* モーダルの高さ */
 	background-color: rgb(170, 188, 187);
 	border-radius: 13px;
+	overflow-y: scroll;
 	@media screen and (max-width:1100px) {
 		width: 90%;
 		height: 700px;
-		overflow-y: scroll;
 	}
 	&-inner {
 		max-width: 1100px;
@@ -803,6 +823,7 @@ img {
 			max-width: 50%;
 			img {
 				width: 100%;
+				padding-bottom: 10px;
 			}
 			p {
 				margin-bottom: 20px;
