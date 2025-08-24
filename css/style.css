@@ -105,7 +105,7 @@ img {
   right: 0;
   padding: 50px 50px 0;
   opacity: 0;
-  animation: txt 0.5s ease forwards;
+  animation: txt 0.3s ease forwards;
   animation-delay: 1s;
 }
 @media screen and (max-width: 767px) {
@@ -161,10 +161,19 @@ img {
   }
 }
 @keyframes txt {
+  from {
+    transform: translateY(50px); /* 下から50pxずらしておく */
+    opacity: 0; /* 見えない状態 */
+  }
   to {
-    opacity: 1;
+    transform: translateY(0); /* 元の位置に戻す */
+    opacity: 1; /* 表示する */
   }
 }
+.hidden {
+  display: none;
+}
+
 .container {
   position: absolute;
   bottom: 3%;
@@ -227,9 +236,12 @@ img {
   }
 }
 
+.ttl_space {
+  padding-top: 100vh;
+}
+
 .ttl {
   position: relative;
-  padding-top: 100vh;
 }
 .ttl-img {
   width: 100vw;
@@ -408,7 +420,6 @@ img {
   width: 60%;
   height: auto;
   animation: deco infinite 3s;
-  overflow-x: hidden;
 }
 
 @keyframes deco {
@@ -425,7 +436,7 @@ img {
 .deco-right {
   bottom: -65px;
   right: -10px;
-  z-index: 999;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 1450px) {
   .deco-right {
@@ -478,7 +489,7 @@ img {
   top: -65px;
   left: -10px;
   transform: rotate(180deg);
-  z-index: 5;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 1450px) {
   .deco-left {
@@ -528,11 +539,6 @@ img {
 }
 
 #skill {
-  background-image: url("../images/bg_tulip.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
   position: relative;
 }
 #skill::before {
@@ -542,8 +548,7 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: var(--blue);
-  opacity: 0.7;
+  background-color: rgba(149, 185, 198, 0.5);
 }
 @media screen and (max-width: 930px) {
   #skill h2 {
@@ -1011,77 +1016,77 @@ body.fixed {
   right: 0;
 }
 
-#image {
+#board {
   background-color: var(--orange);
   position: relative;
   overflow-x: hidden;
 }
 
-.image__inner {
+.board__inner {
   padding-bottom: 180px;
 }
-.image__inner h2 {
+.board__inner h2 {
   color: var(--yellow);
   padding: 180px 0 20px;
 }
 @media screen and (max-width: 930px) {
-  .image__inner h2 {
+  .board__inner h2 {
     text-align: center;
   }
 }
 @media screen and (max-width: 1070px) {
-  .image__inner h2 {
+  .board__inner h2 {
     padding-top: 130px;
   }
 }
 @media screen and (max-width: 767px) {
-  .image__inner h2 {
+  .board__inner h2 {
     padding-top: 130px;
   }
 }
-.image__inner-bg {
+.board__inner-bg {
   position: relative;
   border: solid 1.5px var(--black);
 }
-.image__inner-bg img {
+.board__inner-bg img {
   width: 1000px;
   height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.image__inner-item01 {
+.board__inner-item01 {
   position: absolute;
   top: 25%;
   right: -7%;
 }
-.image__inner-item01 img {
+.board__inner-item01 img {
   width: 380px;
   transform: rotate(10deg);
 }
-.image__inner-item02 {
+.board__inner-item02 {
   position: absolute;
   top: 40%;
   left: -10%;
 }
-.image__inner-item02 img {
+.board__inner-item02 img {
   width: 300px;
 }
-.image__inner-item03 {
+.board__inner-item03 {
   position: absolute;
   bottom: 13%;
   left: 7%;
 }
-.image__inner-item03 img {
+.board__inner-item03 img {
   width: 270px;
   transform: rotate(10deg);
 }
-.image__inner-item04 {
+.board__inner-item04 {
   position: absolute;
   top: 42%;
   right: -4%;
   animation: rotateAnimation 15s linear infinite;
 }
-.image__inner-item04 img {
+.board__inner-item04 img {
   width: 120px;
 }
 @keyframes rotateAnimation {
@@ -1092,13 +1097,13 @@ body.fixed {
     transform: rotate(360deg);
   }
 }
-.image__inner-item05 {
+.board__inner-item05 {
   position: absolute;
   bottom: 17%;
   right: -10%;
   transform: rotate(-10deg);
 }
-.image__inner-item05 p {
+.board__inner-item05 p {
   font-family: "Sacramento", cursive;
   font-size: 60px;
   line-height: 120%;
@@ -1106,12 +1111,8 @@ body.fixed {
 }
 
 #footer {
-  background-image: url("../images/bg_tulip.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
   position: relative;
+  z-index: 0;
 }
 #footer::before {
   content: "";
@@ -1121,6 +1122,7 @@ body.fixed {
   bottom: 0;
   left: 0;
   background-color: rgba(255, 135, 71, 0.5);
+  z-index: 0;
 }
 
 .footer__inner {
@@ -1177,16 +1179,6 @@ body.fixed {
   .footer__inner-sns img {
     width: 40px;
   }
-}
-
-.copy {
-  background-color: var(--blue);
-  width: 100vw;
-  z-index: 3;
-}
-.copy p {
-  text-align: center;
-  padding: 20px 0;
 }
 
 #copy {

@@ -1,3 +1,23 @@
+jQuery(function() {
+
+  var ttlOffset = $('.ttl').offset().top; // ttl要素の上端の位置（ページ最上部からの距離）
+
+  $(window).on('scroll', function () {
+    var point = $(window).scrollTop();    // 現在のスクロール位置（画面の上端）
+    var dispHeight = $(window).height();  // 表示領域の高さ
+    var center = point + dispHeight * 0.5; // 画面の中央位置
+
+    // 画面中央がttlの上端に到達したら
+    if(center >= ttlOffset){
+      $('.header__inner').addClass('hidden');
+    } else {
+      $('.header__inner').removeClass('hidden');
+    }
+  });
+
+});
+
+
 const slideSpeed = 11000;
 const swiper = new Swiper(".swiper", {
   centeredSlides: true, // 1枚目のスライドを中央にする
@@ -69,3 +89,4 @@ AOS.init();
     $('#overlay, .modal').fadeOut();
     });
 });
+

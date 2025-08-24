@@ -109,7 +109,7 @@ img {
 		right: 0;
 		padding: 50px 50px 0;
 		opacity: 0;
-		animation:txt 0.5s ease forwards;
+		animation:txt 0.3s ease forwards;
 		animation-delay: 1s;
 		@include mq(sp) {
 			padding: 30px 30px 0;
@@ -153,10 +153,20 @@ img {
 	}
 }
 @keyframes txt {
-	to {
-		opacity: 1;
-	}
+  from {
+    transform: translateY(50px); /* 下から50pxずらしておく */
+    opacity: 0;                  /* 見えない状態 */
+  }
+  to {
+    transform: translateY(0);    /* 元の位置に戻す */
+    opacity: 1;                  /* 表示する */
+  }
 }
+
+.hidden {
+	display: none;
+}
+
 
 // 【スクロールダウン】
 .container {
@@ -216,23 +226,11 @@ img {
 }
 // 【スクロールダウン】
 
-
+.ttl_space {
+	padding-top: 100vh;
+}
 .ttl {
 	position: relative;
-	padding-top: 100vh;
-	// }
-	// &::before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 100vh;
-	// 	right: 0;
-	// 	bottom: 0;
-	// 	left: 0;
-	// 	background-color: #FFF0AA;
-	// 	opacity: 0.3;
-	// 	z-index: -1;
-	// 	display: inline-block;
-	// }
 	&-img {
 		width: 100vw;
 		position: relative;
@@ -393,7 +391,6 @@ img {
 	width: 60%;
 	height: auto;
 	animation: deco infinite 3s;
-	overflow-x: hidden;
 }
 @keyframes deco{
 	0%{rotate: 0deg;}
@@ -406,7 +403,8 @@ img {
 .deco-right {
 	bottom: -65px;
 	right: -10px;
-	z-index: 999;
+	// z-index: 999;
+	overflow-x: hidden;
 	@media screen and (max-width:1450px) {
 		bottom: -60px;
 	}
@@ -440,7 +438,8 @@ img {
 	top: -65px;
 	left: -10px;
 	transform:rotate(180deg);
-	z-index: 5;
+	// z-index: 999;
+	overflow-x: hidden;
 	@media screen and (max-width:1450px) {
 		top: -60px;
 	}
@@ -474,11 +473,6 @@ img {
 
 // 【スキルここから】
 #skill {
-	background-image: url("../images/bg_tulip.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-    background-repeat: no-repeat;
-	width: 100%;
 	position: relative;
 	&::before {
 		content: '';
@@ -487,8 +481,7 @@ img {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: var(--blue);
-		opacity: 0.7;
+		background-color: rgba(149, 185, 198, 0.5);
 	}
 	@media screen and (max-width:930px) {
 		h2 {
@@ -496,6 +489,7 @@ img {
 		}
 	}
 }
+
 .skill__inner {
 	z-index: 2;
 	padding: 180px 0;
@@ -648,19 +642,6 @@ img {
 		transition-timing-function: linear;
 		cursor: pointer;
 	}
-// .swiper-slide {
-// 	opacity: .4; /* 左右のスライドを薄くする */
-// 	transform: scale(0.5); /* 左右のスライドを小さくする */
-// 	transition: .7s; /* ゆっくり小さくさせる */
-// 	top: 20px; // 左右のスライドを下げる
-// 	cursor: pointer;
-// }
-// .swiper-slide-active {
-// 	opacity: 1; /* 中央のスライドは薄くしない */
-// 	transform: scale(1); /* 中央のスライドは小さくしない */
-// 	z-index: 1; /* 中央のスライドを一番上にする */
-// 	top: 0; // 中央のスライドは下げない
-// }
 
 .arrow{
 	position: relative;
@@ -921,12 +902,12 @@ body.fixed {
 
 
 // 【ボードここから】
-#image {
+#board {
 	background-color: var(--orange);
 	position: relative;
 	overflow-x: hidden;
 }
-.image__inner {
+.board__inner {
 	padding-bottom: 180px;
 	h2 {
 		color: var(--yellow);
@@ -1013,12 +994,8 @@ body.fixed {
 
 // 【フッターここから】
 #footer {
-	background-image: url("../images/bg_tulip.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-    background-repeat: no-repeat;
-	width: 100%;
 	position: relative;
+	z-index: 0;
 	&::before {
 		content: '';
 		position: absolute;
@@ -1027,8 +1004,11 @@ body.fixed {
 		bottom: 0;
 		left: 0;
 		background-color: rgba(255, 135, 71, 0.5);
+		z-index: 0;
 	}
 }
+
+
 
 .footer__inner {
 	z-index: 2;
@@ -1075,19 +1055,6 @@ body.fixed {
 		}
 	}
 }
-.copy {
-	background-color: var(--blue);
-	width: 100vw;
-	z-index: 3;
-	p {
-		text-align: center;
-		padding: 20px 0;
-	}
-}
-
-
-
-// 【スキルここから】
 #copy {
 	background-color: var(--blue);
 	width: 100%;
@@ -1099,7 +1066,4 @@ body.fixed {
 		padding: 7px 0;
 	}
 }
-// 【スキルここまで】
-
-
 // 【フッターここまで】
