@@ -200,7 +200,7 @@ img {
 		}
 	}
 	@media screen and (max-width:620px) {
-		bottom: 57%;
+		bottom: 49%;
 	}
 	.scroll {
 		position: absolute;
@@ -424,7 +424,7 @@ img {
 
 .deco-right {
 	bottom: -65px;
-	right: -10px;
+	right: 0;
 	// z-index: 999;
 	overflow-x: hidden;
 	@media screen and (max-width:1450px) {
@@ -458,7 +458,7 @@ img {
 }
 .deco-left {
 	top: -65px;
-	left: -10px;
+	// left: -10px;
 	transform:rotate(180deg);
 	// z-index: 999;
 	overflow-x: hidden;
@@ -555,6 +555,7 @@ img {
 #works {
 	background-color: var(--blue);
 	position: relative;
+	overflow-x: hidden;
 }
 .works__inner {
 	h2 {
