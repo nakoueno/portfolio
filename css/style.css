@@ -193,8 +193,8 @@ img {
 
 .container {
   position: absolute;
-  bottom: 3%;
-  right: 5%;
+  bottom: 23%;
+  right: 7%;
   /* 矢印のアニメーション部分 */
   /* 矢印のアニメーション */
 }
@@ -203,8 +203,16 @@ img {
   animation: rotateAnimation 13s linear infinite;
 }
 @media screen and (max-width: 767px) {
+  .container {
+    bottom: 44%;
+  }
   .container img {
     width: 90px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .container {
+    bottom: 57%;
   }
 }
 .container .scroll {
@@ -214,7 +222,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .container .scroll {
-    right: 55%;
+    right: 56%;
   }
 }
 .container .scroll::before {
@@ -1068,13 +1076,22 @@ body.fixed {
 }
 .board__inner-bg {
   position: relative;
-  border: solid 1.5px var(--black);
+  display: flex;
 }
 .board__inner-bg img {
-  width: 1000px;
-  height: 600px;
+  width: 50%;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 1080px) {
+  .board__inner-bg {
+    display: block;
+  }
+  .board__inner-bg img {
+    width: 100%;
+    height: 350px;
+  }
 }
 .board__inner-item01 {
   position: absolute;
@@ -1082,30 +1099,30 @@ body.fixed {
   right: -7%;
 }
 .board__inner-item01 img {
-  width: 380px;
+  width: 300px;
   transform: rotate(10deg);
 }
 .board__inner-item02 {
   position: absolute;
-  top: 40%;
-  left: -10%;
+  bottom: 25%;
+  left: 6%;
 }
 .board__inner-item02 img {
-  width: 300px;
+  width: 220px;
 }
 .board__inner-item03 {
   position: absolute;
   bottom: 13%;
-  left: 7%;
+  left: 20%;
 }
 .board__inner-item03 img {
-  width: 270px;
+  width: 220px;
   transform: rotate(10deg);
 }
 .board__inner-item04 {
   position: absolute;
-  top: 42%;
-  right: -4%;
+  bottom: 26%;
+  left: -3%;
   animation: rotateAnimation 15s linear infinite;
 }
 .board__inner-item04 img {
@@ -1121,15 +1138,39 @@ body.fixed {
 }
 .board__inner-item05 {
   position: absolute;
-  bottom: 17%;
-  right: -10%;
-  transform: rotate(-10deg);
+  bottom: 50%;
+  left: 50%;
 }
-.board__inner-item05 p {
-  font-family: "Sacramento", cursive;
-  font-size: 60px;
-  line-height: 120%;
-  border-bottom: solid 1px var(--black);
+.board__inner-item05 img {
+  width: 60px;
+  transform: rotate(10deg);
+}
+.board__inner-item06 {
+  position: absolute;
+  bottom: 40%;
+  left: 40%;
+}
+.board__inner-item06 img {
+  width: 60px;
+  transform: rotate(10deg);
+}
+.board__inner-item07 {
+  position: absolute;
+  bottom: 30%;
+  left: 30%;
+}
+.board__inner-item07 img {
+  width: 60px;
+  transform: rotate(10deg);
+}
+.board__inner-item08 {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+}
+.board__inner-item08 img {
+  width: 60px;
+  transform: rotate(10deg);
 }
 
 #footer {
@@ -1204,7 +1245,7 @@ body.fixed {
 }
 
 #copy {
-  background-color: var(--blue);
+  background-color: var(--orange);
   width: 100%;
   position: relative;
 }
