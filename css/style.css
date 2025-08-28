@@ -28,7 +28,7 @@ html {
   background-color: transparent;
   font-size: 14px;
   color: var(--black);
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   font-style: italic;
   scroll-behavior: smooth;
@@ -52,11 +52,12 @@ a:hover {
 h2 {
   font-size: 55px;
   letter-spacing: -3px;
+  font-family: "Noto Serif JP", serif;
 }
 
 p {
   line-height: 180%;
-  font-family: "Noto Sans JP", san-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 img {
@@ -649,7 +650,7 @@ img {
 .works__inner p {
   padding: 0 0;
   line-height: 150%;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Serif JP", sans-serif;
 }
 .works__inner-list {
   display: flex;
@@ -969,7 +970,7 @@ img {
   float: left;
   padding: 0 10px;
   margin: 13px 0 7px;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 530px) {
   .modal__content-item > div dd {
@@ -1067,6 +1068,7 @@ body.fixed {
   justify-content: center;
   align-items: center;
   padding: 180px 0;
+  font-family: "Noto Serif JP", serif;
 }
 @media screen and (max-width: 767px) {
   .footer__inner {
