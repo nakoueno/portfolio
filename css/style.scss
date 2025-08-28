@@ -125,7 +125,7 @@ img {
 		right: 0;
 		padding: 50px 50px 0;
 		opacity: 0;
-		animation:txt 0.3s ease forwards;
+		animation:txt 0.4s ease forwards;
 		animation-delay: 1s;
 		@include mq(sp) {
 			padding: 30px 30px 0;
@@ -169,14 +169,14 @@ img {
 	}
 }
 @keyframes txt {
-  from {
-    transform: translateY(50px); /* 下から50pxずらしておく */
-    opacity: 0;                  /* 見えない状態 */
-  }
-  to {
-    transform: translateY(0);    /* 元の位置に戻す */
-    opacity: 1;                  /* 表示する */
-  }
+	from {
+		transform: translateY(50px); /* 下から50pxずらしておく */
+		opacity: 0;                  /* 見えない状態 */
+	}
+	to {
+		transform: translateY(0);    /* 元の位置に戻す */
+		opacity: 1;                  /* 表示する */
+	}
 }
 
 .hidden {
@@ -367,7 +367,7 @@ img {
 		top: 0;
 		right: 60px;
 		z-index: 999;
-		animation: rotateAnimation 15s linear infinite;
+		animation: rotateAnimation 10s linear infinite;
 		@media screen and (max-width:930px) {
 			width: 100px;
 			right: 28%;
@@ -413,6 +413,7 @@ img {
 	width: 60%;
 	height: auto;
 	animation: deco infinite 3s;
+	overflow-x: hidden;
 }
 @keyframes deco{
 	0%{rotate: 0deg;}
@@ -425,8 +426,6 @@ img {
 .deco-right {
 	bottom: -65px;
 	right: 0;
-	// z-index: 999;
-	overflow-x: hidden;
 	@media screen and (max-width:1450px) {
 		bottom: -60px;
 	}
@@ -460,8 +459,6 @@ img {
 	top: -65px;
 	// left: -10px;
 	transform:rotate(180deg);
-	// z-index: 999;
-	overflow-x: hidden;
 	@media screen and (max-width:1450px) {
 		top: -60px;
 	}
@@ -503,7 +500,7 @@ img {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: rgba(149, 185, 198, 0.5);
+		background-color: rgba(149, 185, 198, 0.65);
 	}
 	@media screen and (max-width:930px) {
 		h2 {
@@ -928,139 +925,6 @@ body.fixed {
 }
 // 【ワークスここまで】
 
-
-// 【ボードここから】
-#board {
-	background-color: var(--orange);
-	position: relative;
-	overflow-x: hidden;
-}
-.board__inner {
-	padding-bottom: 180px;
-	h2 {
-		color: var(--yellow);
-		padding: 180px 0 20px;
-		@media screen and (max-width:930px) {
-			text-align: center;
-		}
-		@media screen and (max-width:1070px) {
-			padding-top: 130px;
-		}
-		@include mq(sp) {
-			padding-top: 130px;
-		}
-	}
-	&-bg {
-		position: relative;
-		display: flex;
-		img {
-			width: 50%;
-			height: 500px;
-			object-fit: cover;
-		}
-		@media screen and (max-width:1080px) {
-			display: block;
-			img {
-				width: 100%;
-				height: 350px;
-			}
-		}
-	}
-	&-item01 {
-		position: absolute;
-		top: 25%;
-		right: -7%;
-		img {
-			width: 300px;
-			transform: rotate(10deg);
-		}
-	}
-	&-item02 {
-		position: absolute;
-		bottom: 25%;
-		left: 6%;
-		img {
-			width: 220px;
-		}
-	}
-	&-item03 {
-		position: absolute;
-		bottom: 13%;
-		left: 20%;
-		img {
-			width: 220px;
-			transform: rotate(10deg);
-		}
-	}
-	&-item04 {
-		position: absolute;
-		bottom: 26%;
-		left: -3%;
-		animation: rotateAnimation 15s linear infinite;
-		img {
-			width: 120px;
-		}
-	}
-	@keyframes rotateAnimation {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
-	&-item05 {
-		position: absolute;
-		bottom: 50%;
-		left: 50%;
-		img {
-			width: 60px;
-			transform: rotate(10deg);
-		}
-	}
-	&-item06 {
-		position: absolute;
-		bottom: 40%;
-		left: 40%;
-		img {
-			width: 60px;
-			transform: rotate(10deg);
-		}
-	}
-	&-item07 {
-		position: absolute;
-		bottom: 30%;
-		left: 30%;
-		img {
-			width: 60px;
-			transform: rotate(10deg);
-		}
-	}
-	&-item08 {
-		position: absolute;
-		bottom: 20%;
-		left: 20%;
-		img {
-			width: 60px;
-			transform: rotate(10deg);
-		}
-	}
-	// &-item05 {
-	// 	position: absolute;
-	// 	bottom: 17%;
-	// 	right: -10%;
-	// 	transform: rotate(-10deg);
-	// 	p {
-	// 		font-family: "Sacramento", cursive;
-	// 		font-size: 60px;
-	// 		line-height: 120%;
-	// 		border-bottom: solid 1px var(--black);
-	// 	}
-	// }
-}
-
-
-// 【ボードここまで】
 
 
 // 【フッターここから】
