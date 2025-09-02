@@ -426,7 +426,8 @@ img {
 
 .deco-right {
 	bottom: -65px;
-	right: 0;
+	right: -10px;
+	overflow: hidden;
 	@media screen and (max-width:1450px) {
 		bottom: -60px;
 	}
@@ -458,7 +459,8 @@ img {
 }
 .deco-left {
 	top: -65px;
-	// left: -10px;
+	left: -10px;
+	overflow: hidden;
 	transform:rotate(180deg);
 	@media screen and (max-width:1450px) {
 		top: -60px;
