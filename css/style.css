@@ -462,7 +462,8 @@ img {
 }
 .deco-right {
   bottom: -65px;
-  right: 0;
+  right: 0px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1450px) {
   .deco-right {
@@ -879,8 +880,8 @@ img {
 }
 @media screen and (max-width: 650px) {
   .modal__content-nmb > p {
-    font-size: 15px;
-    padding: 0 0 0 25px;
+    font-size: 13px;
+    padding: 3px 0 0 25px;
   }
 }
 .modal__content-nmb > p::before {
