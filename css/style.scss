@@ -426,8 +426,7 @@ img {
 
 .deco-right {
 	bottom: -65px;
-	right: -10px;
-	overflow: hidden;
+	right: 0;
 	@media screen and (max-width:1450px) {
 		bottom: -60px;
 	}
