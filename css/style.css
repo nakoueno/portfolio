@@ -514,7 +514,7 @@ img {
 
 .deco-left {
   top: -65px;
-  left: -10px;
+  left: 0px;
   overflow: hidden;
   transform: rotate(180deg);
 }
