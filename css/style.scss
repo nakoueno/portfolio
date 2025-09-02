@@ -718,11 +718,6 @@ img {
 .modal {
 	display: none; /* デフォルトでは非表示に設定 */
 	position: fixed; /* モーダルがページ全体に固定されるように設定 */
- 	top: 0; /* ページの最上部からスタート */
-	left: 0; /* ページの最左端からスタート */
-	width: 100%; /* モーダルが画面全体の幅を占める */
-	height: 100%; /* モーダルが画面全体の高さを占める */
-	background-color: rgba(0, 0, 0, 0.4); /* 背景を半透明の黒に設定（モーダルの背後が見えるように） */
 	z-index: 999;
 }
 
@@ -878,15 +873,15 @@ img {
 
     /* オーバーレイ */
 .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    }
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5); /* 半透明の黒 */
+	z-index: 998; /* モーダルより後ろにする */
+}
 
 
 /* モーダルを閉じるボタン（×）のスタイル */
@@ -920,9 +915,9 @@ img {
 }
 /* スクロール固定用のbody */
 body.fixed {
-    position: fixed;
-    left: 0;
-    right: 0;
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
 }
 // 【ワークスここまで】
 
