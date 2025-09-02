@@ -1096,6 +1096,9 @@ body.fixed {
 @media screen and (max-width: 767px) {
   .footer__inner-sns {
     padding-top: 30px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
   }
 }
 .footer__inner-sns a {
@@ -1103,7 +1106,7 @@ body.fixed {
 }
 @media screen and (max-width: 600px) {
   .footer__inner-sns a {
-    padding-right: 10px;
+    padding-right: 0;
   }
 }
 .footer__inner-sns img {

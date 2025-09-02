@@ -973,11 +973,14 @@ body.fixed {
 		z-index: 1;
 		@include mq(sp) {
 			padding-top: 30px;
+			display: flex;
+			gap: 40px;
+			justify-content: center;
 		}
 		a {
 			padding-right: 20px;
 			@media screen and (max-width:600px) {
-				padding-right: 10px;
+				padding-right: 0;
 			}
 		}
 		img {
