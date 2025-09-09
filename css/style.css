@@ -462,7 +462,7 @@ img {
 }
 .deco-right {
   bottom: -65px;
-  right: 0px;
+  right: -8px;
   overflow: hidden;
 }
 @media screen and (max-width: 1450px) {
@@ -493,6 +493,7 @@ img {
 }
 @media screen and (max-width: 840px) {
   .deco-right {
+    right: 0px;
     bottom: -46px;
   }
 }
@@ -514,7 +515,7 @@ img {
 
 .deco-left {
   top: -65px;
-  left: 0px;
+  left: -8px;
   overflow: hidden;
   transform: rotate(180deg);
 }
@@ -547,6 +548,7 @@ img {
 @media screen and (max-width: 840px) {
   .deco-left {
     top: -46px;
+    left: 0px;
   }
 }
 @media screen and (max-width: 700px) {
