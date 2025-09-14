@@ -3,650 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Send+Flowers&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.typekit.net/bud7gdq.css">
-	<title>nu_____design portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Padyakke+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="./icons/favicon.ico">
+    <title>株式会社アンカー建設</title>
 </head>
 <body>
-    <header class="header">
-		<div class="header__bg"></div>
-		<div class="header__inner">
-			<div>
-				<img src="./images/logo.svg">
-				<p>
-				Konnitiha! UenoNako to moushimasu.<br>
-				Watashi no Portfolio wo Mitekurete Arigatou.<br>
-				Kimi ha Do yatte koko ni Tadoritsuitano?<br>
-				Kore mo nanika no Goen Dane.<br>
-				Yukkuri shite itte!<br>
-				Soshite watashi no namae wo<br>
-				Oboete Kaettene!
-				</p>
-			</div>
-			<div class="container">
-				<div class="scroll"></div>
-				<img src="./images/scroll.png">
-			</div>
-		</div>
-	</header>
-	<main>
-		<div class="ttl_space"></div>
-		<div class="ttl">
-            <img src="./images/bg_pc.png" alt="" class="ttl__pc ttl-img">
-			<img src="./images/bg_sp.png" alt="" class="ttl__sp ttl-img">
-			<h1>Nako Ueno Design</h1>
+<!-- 【header】 -->
+    <header id="header">
+        <div class="scroll_down pc-only">
+            <p>scroll</p>
         </div>
+        <p class="header__txt01">ANCHOR</p>
+        <p class="header__txt02">Create Your<br>Urban Dream<br>SINCE 1943</p>
+        <p class="header__txt03">街と人をツナグ<br>最後まで、<br>ずっと。</p>
+        <div class="header__video">
+            <video src="./video/Video1.mp4" autoplay
+    muted
+    loop
+    laysinline
+    webkit-playsinline
+    preload="auto" class="left"></video>
+            <video src="./video/Video2.mp4" autoplay
+    muted
+    loop
+    playsinline
+    webkit-playsinline
+    preload="auto" class="left"></video>
+            <video src="./video/Video3.mp4" autoplay
+    muted
+    loop
+    playsinline
+    webkit-playsinline
+    preload="auto" class="right"></video>
+        </div>
+        <div class="header__inner top-page" id="global-nav"></div>
+    </header>
 
 
-		<section id="about">
-			<div class="about__inner wrapper">
-				<div class="about__inner-img" data-aos="fade-up">
-					<div class="about__inner__img">
-						<img src="./images/about_img01.png">
-						<img src="./images/about_img02.png">
-					</div>
-					<div class="about__inner__img-deco">
-						<img src="./images/about_txt.png">
-					</div>
-				</div>
-				<div class="about__inner-txt" data-aos="fade-up">
-					<h2>ABOUT</h2>
-					<p>
-						ueno nakoです。宮城県出身 東京都在住。<br>
-						会社員WEBデザイナーです。<br class="sp-only">
-						よろしくお願いします( ◜◡◝ )
-					</p>
-				</div>
-			</div>
-			<div class="deco deco-right">
-				<img src="./images/tulip.png">
-			</div>
-		</section>
 
 
-		<section id="skill">
-			<div class="skill__inner wrapper" data-aos="fade-up">
-				<h2>SKILL</h2>
-				<div class="skill__inner-item">
-					<div>
-						<h3>DESIGN</h3>
-						<p>バナー　LP　</p>
-						<p>使用ソフト：Photoshop, Illustrator</p>
-					</div>
-					<div>
-						<h3>CORDING</h3>
-						<p>LP　企業サイト</p>
-						<p>対応言語：HTML, CSS, Javascript, jQuery</p>
-					</div>
-				</div>
-			</div>
-		</section>
+    <main>
+<!-- 【news】 -->
+        <section id="news" class="news__bg wrapper">
+            <h2>最新情報</h2>
+            <ul>
+                <li class="news__list">
+                    <a href="#">
+                        <div class="news__list-ttl">
+                        <p>2023.10.30</p>
+                        <p class="news__btn-blu">お知らせ</p>
+                        </div>
+                        <p class="news__txt">K様の別邸を建設させていただきました。</p>
+                    </a>
+                </li>
+                <li class="news__list">
+                    <a href="#">
+                        <div class="news__list-ttl">
+                        <p>2023.10.28</p>
+                        <p class="news__btn-grn">採用情報</p>
+                        </div>
+                        <p class="news__txt">サイト運用担当者を1名募集します！</p>
+                    </a>
+                </li>
+                <li class="news__list">
+                    <a href="#">
+                        <div class="news__list-ttl">
+                        <p>2023.10.14</p>
+                        <p class="news__btn-blu">お知らせ</p>
+                        </div>
+                        <p class="news__txt">建築物ニュースサイト「新建設」様にて取材いただきました。</p>
+                    </a>
+                </li>
+                <li class="news__list">
+                    <a href="#">
+                        <div class="news__list-ttl">
+                        <p>2023.10.02</p>
+                        <p class="news__btn-blu">お知らせ</p>
+                        </div>
+                        <p class="news__txt">内定者オリエンテーションを行いました。</p>
+                    </a>
+                </li>
+                <li class="news__list">
+                    <a href="#">
+                        <div class="news__list-ttl">
+                        <p>2023.09.21</p>
+                        <p class="news__btn-gray">その他</p>
+                        </div>
+                        <p class="news__txt">社内のBBQ＆野球大会を実施しました。</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="news__btn-a">
+                <div class="btn news__btn">
+                    <a href="news.html">最新情報一覧へ</a>
+                </div>
+            </div>
+        </section>
 
 
-		<section id="works">
-			<div class="works__inner">
-				<h2 class="wrapper" data-aos="fade-up">WORKS</h2>
-				<!-- workコンテンツ -->
-				<div class="swiper">
-					<ul class="works__inner-list swiper-wrapper">
-						<li data-id="1" class="work swiper-slide">
-							<div class="works__inner-content">
-								<div class="works__inner-ttl">
-									<div class="works__inner-nmb">
-										<p>01</p>
-									</div>
-									<div class="works__inner-name">
-										<p><span>Apparel LP</span></p>
-										<p>Design, Cording</p>
-									</div>
-								</div>
-								<div class="works__inner-img">
-									<img src="./images/work_01.jpg">
-									<p class="click arrow">CHECK</p>
-								</div>
-							</div>
-						</li>
-						<li data-id="2" class="work swiper-slide">
-							<div class="works__inner-content">
-								<div class="works__inner-ttl">
-									<div class="works__inner-nmb">
-										<p>02</p>
-									</div>
-									<div class="works__inner-name">
-										<p><span>flower shop Blume</span></p>
-										<p>Cording</p>
-									</div>
-								</div>
-								<div class="works__inner-img">
-									<img src="./images/work_02.jpg">
-									<p class="click arrow">CHECK</p>
-								</div>
-							</div>
-						</li>
-						<li data-id="3" class="work swiper-slide">
-							<div class="works__inner-content">
-								<div class="works__inner-ttl">
-									<div class="works__inner-nmb">
-										<p>03</p>
-									</div>
-									<div class="works__inner-name">
-										<p><span>ANCHOR</span></p>
-										<p>Cording</p>
-									</div>
-								</div>
-								<div class="works__inner-img">
-									<img src="./images/work_03.jpg">
-									<p class="click arrow">CHECK</p>
-								</div>
-							</div>
-						</li>
-						<li data-id="4" class="work swiper-slide">
-							<div class="works__inner-content">
-								<div class="works__inner-ttl">
-									<div class="works__inner-nmb">
-										<p>04</p>
-									</div>
-									<div class="works__inner-name">
-										<p><span>Sauna resort YUZU</span></p>
-										<p>Design</p>
-									</div>
-								</div>
-								<div class="works__inner-img">
-									<img src="./images/work_04-1.png">
-									<p class="click arrow">CHECK</p>
-								</div>
-							</div>
-						</li>
-						<li data-id="5" class="work swiper-slide">
-							<div class="works__inner-content">
-								<div class="works__inner-ttl">
-									<div class="works__inner-nmb">
-										<p>05</p>
-									</div>
-									<div class="works__inner-name">
-										<p><span>Sweet Sweets</span></p>
-										<p>Design</p>
-									</div>
-								</div>
-								<div class="works__inner-img">
-									<img src="./images/work_05.jpg">
-									<p class="click arrow">CHECK</p>
-								</div>
-							</div>
-						</li>
-						<li data-id="6" class="work swiper-slide">
-							<div class="works__inner-content">
-								<div class="works__inner-ttl">
-									<div class="works__inner-nmb">
-										<p>06</p>
-									</div>
-									<div class="works__inner-name">
-										<p><span>焼き鳥屋 KOTOBUKI</span></p>
-										<p>Design</p>
-									</div>
-								</div>
-								<div class="works__inner-img">
-									<img src="./images/work_06.jpg">
-									<p class="click arrow">CHECK</p>
-								</div>
-							</div>
-						</li>
-						<li data-id="7" class="work swiper-slide">
-							<div class="works__inner-content">
-								<div class="works__inner-ttl">
-									<div class="works__inner-nmb">
-										<p>07</p>
-									</div>
-									<div class="works__inner-name">
-										<p><span>flower shop Blume</span></p>
-										<p>Cording</p>
-									</div>
-								</div>
-								<div class="works__inner-img">
-									<img src="./images/work_01.jpg">
-									<p class="click arrow">CLICK</p>
-								</div>
-							</div>
-						</li>
-						<li data-id="8" class="work swiper-slide">
-							<div class="works__inner-content">
-								<div class="works__inner-ttl">
-									<div class="works__inner-nmb">
-										<p>02</p>
-									</div>
-									<div class="works__inner-name">
-										<p><span>flower shop Blume</span></p>
-										<p>Cording</p>
-									</div>
-								</div>
-								<div class="works__inner-img">
-									<img src="./images/work_02.jpg">
-									<p class="click arrow">CHECK</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-<!-- オーバーレイ -->
-			<div id="overlay" class="overlay"></div>
-<!-- 【モーダル中身 - Apparel】 -->
-			<div class="modal" data-id="modal1">
-				<div class="modal__content">
-					<div class="close-button">
-						<span></span>
-						<span></span>
-					</div>
-					<div class="modal__content-inner">
-						<div class="modal__content-ttl">
-							<div class="modal__content-nmb">
-								<p>01</p>
-							</div>
-							<div class="modal__content-name">
-								<p>Apparel LP</p>
-							</div>
-						</div>
-						<div class="modal__content-item">
-							<div>
-								<img src="./images/work_01.jpg">
-							</div>
-							<div>
-								<p>
-								アパレル企業のランディングページのデザイン、コーディングを担当しました。
-								非公開案件のため、画像・商品情報を差し替えて掲載しております。
-								スクロールすることで、女性らしい滑らかな動きをつけました。
-								</p>
-								<a href="https://nakoueno.github.io/spring_collection/" target="_blank" rel="noopener noreferrer"><u>Open this page</u></a>
-								<dl>
-									<div class="modal__content-txt">
-										<dt>制作範囲</dt>
-										<dd>Design [ LP, Banner ]<br>
-										Cording [ HTML, CSS, JavaScript ]</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>制作期間</dt>
-										<dd>1週間</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>想定金額</dt>
-										<dd>5万円</dd>
-									</div>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- 【モーダル中身 - Apparel】 -->
-<!-- 【モーダル中身 - flower shop Blume】 -->
-			<div class="modal" data-id="modal2">
-				<div class="modal__content">
-					<div class="close-button">
-						<span></span>
-						<span></span>
-					</div>
-					<div class="modal__content-inner">
-						<div class="modal__content-ttl">
-							<div class="modal__content-nmb">
-								<p>02</p>
-							</div>
-							<div class="modal__content-name">
-								<p>flower shop Blume</p>
-							</div>
-						</div>
-						<div class="modal__content-item">
-							<div>
-								<img src="./images/work_02.jpg">
-							</div>
-							<div>
-								<p>
-								フラワーショップを運営する企業のコーポレートサイトのコーディングを担当しました。
-								スライダーやGoogle mapを組み込み、シンプルページでもごちゃつかないようスッキリまとめることを心がけました。
-								</p>
-								<a href="https://nakoueno.github.io/flower_shop_blume/" target="_blank" rel="noopener noreferrer"><u>Open this page</u></a>
-								<dl>
-									<div class="modal__content-txt">
-										<dt>制作範囲</dt>
-										<dd>Design [ LP, Banner ]<br>
-										Cording [ HTML, CSS ]</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>制作期間</dt>
-										<dd>1週間</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>想定金額</dt>
-										<dd>3万円</dd>
-									</div>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- 【モーダル中身 - flower shop Blume】 -->
-<!-- 【モーダル中身 - Anchor】 -->
-			<div class="modal" data-id="modal3">
-				<div class="modal__content">
-					<div class="close-button">
-						<span></span>
-						<span></span>
-					</div>
-					<div class="modal__content-inner">
-						<div class="modal__content-ttl">
-							<div class="modal__content-nmb">
-								<p>03</p>
-							</div>
-							<div class="modal__content-name">
-								<p>ANCHOR</p>
-							</div>
-						</div>
-						<div class="modal__content-item">
-							<div>
-								<img src="./images/work_03.jpg">
-							</div>
-							<div>
-								<p>
-								建設会社のコーポレートサイトのコーディングを担当しました。
-								メニューバーの表示方法、背景の作り込みにこだわりました。
-								</p>
-								<a href="https://nakoueno.github.io/anchor_construction/" target="_blank" rel="noopener noreferrer"><u>Open this page</u></a>
-								<dl>
-									<div class="modal__content-txt">
-										<dt>制作範囲</dt>
-										<dd>Design [ LP, Banner ]<br>
-										Cording [ HTML, CSS, JavaScript ]</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>制作期間</dt>
-										<dd>3週間</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>想定金額</dt>
-										<dd>13万円</dd>
-									</div>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- 【モーダル中身 - Anchor】 -->
-<!-- 【モーダル中身 - Sauna resort YUZU】 -->
-			<div class="modal" data-id="modal4">
-				<div class="modal__content">
-					<div class="close-button">
-						<span></span>
-						<span></span>
-					</div>
-					<div class="modal__content-inner">
-						<div class="modal__content-ttl">
-							<div class="modal__content-nmb">
-								<p>04</p>
-							</div>
-							<div class="modal__content-name">
-								<p>Sauna resort YUZU</p>
-							</div>
-						</div>
-						<div class="modal__content-item">
-							<div>
-								<img src="./images/work_04-1.png">
-								<img src="./images/work_04-2.png">
-							</div>
-							<div>
-								<p>
-								サウナリゾートのA4二つ折りリーフレットを作成しました。
-								ゆずをコンセプトにしたファミリー層向けの施設ということで、
-								イエローを基調にファミリーで楽しめるコンテンツを中心に紹介しています。
-								目玉の「2つのサウナ」を表紙に大きく掲載しました。駅構内やパーキングエリアにて配布するイメージです。
-								</p>
-								<dl>
-									<div class="modal__content-txt">
-										<dt>制作範囲</dt>
-										<dd>Design [ Logo, Leaflet ]</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>制作期間</dt>
-										<dd>1週間</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>想定金額</dt>
-										<dd>2万円</dd>
-									</div>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- 【モーダル中身 - Sauna resort YUZU】 -->
-<!-- 【モーダル中身 - Sweet Sweets】 -->
-			<div class="modal" data-id="modal5">
-				<div class="modal__content">
-					<div class="close-button">
-						<span></span>
-						<span></span>
-					</div>
-					<div class="modal__content-inner">
-						<div class="modal__content-ttl">
-							<div class="modal__content-nmb">
-								<p>05</p>
-							</div>
-							<div class="modal__content-name">
-								<p>Sweet Sweets</p>
-							</div>
-						</div>
-						<div class="modal__content-item">
-							<div>
-								<img src="./images/work_05-1.jpg">
-								<img src="./images/work_05-2.jpg">
-								<img src="./images/work_05-3.jpg">
-								<img src="./images/work_05-4.jpg">
-							</div>
-							<div>
-								<p>
-								スイーツカフェのブランドブックを作成しました。120mm×120mmの2つ折り8ページ構成です。
-								「POPで明るい」がコンセプトのため、海外のカフェのようなカラーとフォントを選びました。
-								透かした文字や挿絵がポイントになっています。
-								ご来店されたお客様にお渡しし、インスタグラムへ誘導し再来店を促します。
-								</p>
-								<dl>
-									<div class="modal__content-txt">
-										<dt>制作範囲</dt>
-										<dd>Design [ Brochure ]</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>制作期間</dt>
-										<dd>1週間</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>想定金額</dt>
-										<dd>3万円</dd>
-									</div>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- 【モーダル中身 - Sweet Sweets】 -->
-<!-- 【モーダル中身 - 居酒屋 KOTOBUKI】 -->
-			<div class="modal" data-id="modal6">
-				<div class="modal__content">
-					<div class="close-button">
-						<span></span>
-						<span></span>
-					</div>
-					<div class="modal__content-inner">
-						<div class="modal__content-ttl">
-							<div class="modal__content-nmb">
-								<p>06</p>
-							</div>
-							<div class="modal__content-name">
-								<p>焼き鳥屋 KOTOBUKI</p>
-							</div>
-						</div>
-						<div class="modal__content-item">
-							<div>
-								<img src="./images/work_06.jpg">
-							</div>
-							<div>
-								<p>
-									焼き鳥屋のオープン告知チラシをA4サイズで作成しました。
-									近所のお店に置いてもらい、駅前での配布も行います。
-									ビジネス街に位置するため、仕事終わりの会社員がターゲット。
-									「高級感・洗練」がコンセプトのため、背景や写真のセレクトにこだわりました。
-									高級感を伝えつつ、親しみのある入店しやすい雰囲気を表現するよう心掛けました。
-								</p>
-								<dl>
-									<div class="modal__content-txt">
-										<dt>制作範囲</dt>
-										<dd>Design [ Leaflet ]</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>制作期間</dt>
-										<dd>5日</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>想定金額</dt>
-										<dd>1万円</dd>
-									</div>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- 【モーダル中身 - 居酒屋 KOTOBUKI】 -->
-<!-- 【モーダル中身 - Apparel】 -->
-			<div class="modal" data-id="modal7">
-				<div class="modal__content">
-					<div class="close-button">
-						<span></span>
-						<span></span>
-					</div>
-					<div class="modal__content-inner">
-						<div class="modal__content-ttl">
-							<div class="modal__content-nmb">
-								<p>01</p>
-							</div>
-							<div class="modal__content-name">
-								<p>Apparel LP</p>
-							</div>
-						</div>
-						<div class="modal__content-item">
-							<div>
-								<img src="./images/work_01.jpg">
-							</div>
-							<div>
-								<p>
-								アパレル企業のランディングページのデザイン、コーディングを担当しました。
-								非公開案件のため、画像・商品情報を差し替えて掲載しております。
-								スクロールすることで、女性らしい滑らかな動きをつけました。
-								</p>
-								<a href="https://nakoueno.github.io/spring_collection/" target="_blank" rel="noopener noreferrer"><u>Open this page</u></a>
-								<dl>
-									<div class="modal__content-txt">
-										<dt>制作範囲</dt>
-										<dd>Design [ LP, Banner ]<br>
-										Cording [ HTML, CSS, JavaScript ]</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>制作期間</dt>
-										<dd>2週間</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>想定金額</dt>
-										<dd>-</dd>
-									</div>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- 【モーダル中身 - Apparel】 -->
-<!-- 【モーダル中身 - flower shop Blume】 -->
-			<div class="modal" data-id="modal8">
-				<div class="modal__content">
-					<div class="close-button">
-						<span></span>
-						<span></span>
-					</div>
-					<div class="modal__content-inner">
-						<div class="modal__content-ttl">
-							<div class="modal__content-nmb">
-								<p>02</p>
-							</div>
-							<div class="modal__content-name">
-								<p>flower shop Blume</p>
-							</div>
-						</div>
-						<div class="modal__content-item">
-							<div>
-								<img src="./images/work_02.jpg">
-							</div>
-							<div>
-								<p>
-								フラワーショップを運営する企業のコーポレートサイトのコーディングを担当しました。
-								スライダーやGoogle mapを組み込み、シンプルページでもごちゃつかないようスッキリまとめることを心がけました。
-								</p>
-								<a href="https://nakoueno.github.io/flower_shop_blume/" target="_blank" rel="noopener noreferrer"><u>Open this page</u></a>
-								<dl>
-									<div class="modal__content-txt">
-										<dt>制作範囲</dt>
-										<dd>Design [ LP, Banner ]<br>
-										Cording [ HTML, CSS ]</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>制作期間</dt>
-										<dd>2週間</dd>
-									</div>
-									<div class="modal__content-txt">
-										<dt>想定金額</dt>
-										<dd>-</dd>
-									</div>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-<!-- 【モーダル中身 - flower shop Blume】 -->
-		</section>
+<!-- 【service】 -->
+        <section id="service" class="service__bg">
+            <div class="service__inner wrapper">
+                <h2>サービス内容</h2>
+                <div class="service__inner-list01">
+                    <div>
+                        <div class="img01">
+                        <img src="./images/service01.png" alt="建築事業">
+                        </div>
+                        <div class="txt01">
+                            <p>建築事業</p><p class="pc-only"><span>Architecture</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img01">
+                            <img src="./images/service02.png" alt="土木事業">
+                        </div>
+                        <div class="txt01">
+                            <p>土木事業</p><p class="pc-only"><span>Civil engineering</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service__inner-list02">
+                    <div>
+                        <div class="img01">
+                            <img src="./images/service03.png" alt="外部講師事業">
+                        </div>
+                        <div class="txt02">
+                            <p>外部講師事業</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img01">
+                            <img src="./images/service04.png" alt="PC事業">
+                        </div>
+                        <div class="txt02">
+                            <p>PC事業</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img01">
+                            <img src="./images/service05.png" alt="森林保護事業">
+                        </div>
+                        <div class="txt02">
+                            <p>森林保護事業</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service__btn-a">
+                    <div class="btn service__btn">
+                        <a href="service.html">事業紹介へ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+<!-- 【feature】 -->
+        <section id="feature" class="feature__bg">
+            <div class="feature__inner">
+                <h2>想い・願い</h2>
+                <div class="feature__inner-cts">
+                    <div class="feature__inner-img">
+                        <img src="./images/feature01.jpg" class="img01" alt="想い・願い">
+                        <img src="./images/feature02.jpg" class="img02" alt="想い・願い">
+                    </div>
+                    <div class="feature__inner-txt">
+                        <div class="feature__inner-txt01 slidein slide_left">
+                            <p class="feature__txt01">人と街をつなぎ、形にする。</p>
+                            <p class="feature__txt01">最後まで、ずっと、つなぎとめる。</p>
+                        </div>
+                        <div class="feature__inner-txt02">
+                            <p class="feature__txt02">わたしたちの考える建設は、ただの建物の建設ではありません。<br>
+                            ビジネスの流れ、人々の生活、そして社会のつながりを、あらゆる形でサポートする重要な役割を果たしています。</p>
+                            <p class="feature__txt02">建設業者としての役割を超えて、<br>
+                            お客さまの想いと形をたいせつし、形にすること。</p>
+                            <p class="feature__txt02">それは製品、ギフト、思い出…すべての『もの』に対する私たちの誠実な約束です。<br>
+                            わたしたちはその約束を守るために努力しており、みなさまのビジネスや生活を支え続けることを使命としております。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
 
-		<footer id="footer">
-			<div class="deco deco-left">
-				<img src="./images/tulip.png">
-			</div>
-			<div class="footer__inner wrapper" data-aos="fade-up">
-				<div class="footer__inner-mail">
-					<a href="mailto:nu.nakoueno&#64;gmail.com">Contact me at:<br>
-						<u>nu.nakoueno&#64;gmail.com</u></a>
-				</div>
-				<div class="footer__inner-sns">
-					<a href="https://www.instagram.com/nu_____design/"><img src="./images/sns_instagram.png"></a>
-					<a href="#"><img src="./images/sns_x.png"></a>
-				</div>
-			</div>
-		</footer>
-		<section id="copy">
-			<div><p>©2025 nakoueno</p></div>
-		</section>
-	</main>
-	<!-- Javascript -->
-	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="./JS/jquery-3.7.1.min.js"></script>
-	<script src="./JS/style.js"></script>
-	<!-- Javascript -->
+
+
+
+<!-- 【about】 -->
+        <section id="about" class="about__bg">
+            <div class="about__inner">
+                <h2>会社案内</h2>
+                <div class="about__inner-cts">
+                    <div class="about__inner-left">
+                        <p>SDGsへの取り組み</p>
+                        <div class="about__btn kiran">
+                            <a href="aboutus.html#sdgs">働きがいも経済成長も</a>
+                            <a href="aboutus.html#sdgs">住み続けられるまちづくりを</a>
+                            <a href="aboutus.html#sdgs">つくる責任つかう責任</a>
+                        </div>
+                    </div>
+                    <div class="about__inner-right">
+                        <p>企業情報</p>
+                        <div class="about__btn kiran">
+                            <a href="aboutus.html#president">社長ごあいさつ</a>
+                            <a href="aboutus.html#vision">企業理念</a>
+                            <a href="aboutus.html#network">事業所紹介</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+<!-- 【footer】 -->
+    <div class="footer"></div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/include.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
