@@ -1099,7 +1099,7 @@ body.fixed {
   .footer__inner-sns {
     padding-top: 30px;
     display: flex;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
   }
 }
