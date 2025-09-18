@@ -696,14 +696,19 @@ img {
 	width: 77%;
 	height: 1px;
 	background: var(--black);
-	@include mq(sp) {
-		left: 12%;
-		width: 86%;
+	@media screen and (max-width:800px) {
+	left: 22%;
+	width: 77%;
 	}
-	@media screen and (max-width:590px) {
-	left: 26%;
+	@media screen and (max-width:600px) {
+	left: 19%;
+	width: 80%;
+	}
+	@media screen and (max-width:400px) {
+	left: 25%;
 	width: 74%;
 	}
+
 }
 .click::after{
 	left: 97%;

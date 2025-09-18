@@ -26,12 +26,18 @@ const swiper = new Swiper(".swiper", {
   speed: 6000,
   cssEase: "linear",
   allowTouchMove: true,
-  slidesPerView: 1.3,
+  slidesPerView: 1.2,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
   },
   breakpoints: {
+    600: {
+      slidesPerView: 2 // 768px以上のとき
+    },
+    1000: {
+      slidesPerView: 3 // 768px以上のとき
+    },
     1450: {
       slidesPerView: 4 // 768px以上のとき
     }

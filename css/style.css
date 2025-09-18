@@ -789,15 +789,21 @@ img {
   height: 1px;
   background: var(--black);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
   .works__inner .click::before {
-    left: 12%;
-    width: 86%;
+    left: 22%;
+    width: 77%;
   }
 }
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 600px) {
   .works__inner .click::before {
-    left: 26%;
+    left: 19%;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .works__inner .click::before {
+    left: 25%;
     width: 74%;
   }
 }
