@@ -797,8 +797,8 @@ img {
 }
 @media screen and (max-width: 590px) {
   .works__inner .click::before {
-    left: 22%;
-    width: 77%;
+    left: 26%;
+    width: 74%;
   }
 }
 .works__inner .click::after {

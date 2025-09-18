@@ -26,6 +26,7 @@ const swiper = new Swiper(".swiper", {
   speed: 6000,
   cssEase: "linear",
   allowTouchMove: true,
+  slidesPerView: 1.3,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
