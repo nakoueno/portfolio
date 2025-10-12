@@ -67,3 +67,21 @@ $('.close-button, .overlay').click(function () {
   $(window).scrollTop(scrollPos); // 元の位置に戻す
   $('.overlay, .modal').fadeOut();
 });
+
+
+// 【404リダイレクト】
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.addEventListener("click", (e) => {
+    const link = e.target.closest("a"); // クリックされた要素がaタグか、a内のspanなどだったら取る
+
+    if (link) {
+      const href = link.getAttribute("href");
+
+      if (!href || href.trim() === "" || href === "#" || href === "javascript:void(0)") {
+        e.preventDefault();
+        console.log("404に飛ばします");
+        window.location.href = "./404.html";
+      }
+    }
+  });
+});

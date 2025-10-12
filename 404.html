@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Send+Flowers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/bud7gdq.css">
+	<title>nu_____design portfolio</title>
+</head>
+<body style="background-color: #abc6c1">
+    <main>
+        <div class="error__inner wrapper">
+            <h2>404<br class="sp-only"> File not found</h2>
+            <p>こちらのページは存在しないか、準備中です。<br>お詫びのしるしとしてポジティブになる<br class="sp-only">言葉を贈ります。</p>
+
+            <button id="btn">CLICK !</button>
+            <p id="start" class="start">
+                <img id="rotate" src="./images/positive_start.png" alt="おみくじ">
+            </p>
+            <p>
+                <img src="" id="fortune" class="fortune">
+            </p>
+            <button class="go-top"><a href="./index.html">TOPへ戻る</a></button>
+        </div>
+      <section id="copy" class="copy__404">
+        <div><p>©2025 nakoueno</p></div>
+      </section>
+    </main>
+
+
+<script>
+
+ const results = [
+    'positive_01.png',
+    'positive_02.png',
+    'positive_01.png',
+    'positive_02.png',
+    'positive_01.png',
+    'positive_01.png',
+    'positive_01.png',
+  ];
+
+  const elem = document.getElementById('btn');
+  const element = document.getElementById('start');
+  const rotateItem = document.getElementById('rotate');
+  const target = document.getElementById('btn');
+
+  elem.addEventListener('click', function() {
+    if (element != null) {
+      tatefuri();
+    }
+  });
+
+  function tatefuri() {
+    element.animate(
+      [{
+        transform: 'translateX(0)'
+      }, {
+        transform: 'translateX(-30px)'
+      }, {
+        transform: 'translateX(0)'
+      }], {
+        duration: 100,
+        iterations: 3
+      });
+    setTimeout(function() {
+      touka();
+      // btn();
+    }, 700);
+  }
+
+  function btn() {
+    target.animate(
+      [{
+        opacity: 1
+      }, {
+        opacity: 0
+      }], {
+        duration: 500,
+        fill: 'forwards'
+      });
+    setTimeout(function() {
+      target.remove();
+    }, 1000);
+  }
+
+  function touka() {
+    element.animate(
+      [{
+        opacity: 1
+      }, {
+        opacity: 0
+      }], {
+        duration: 500,
+        fill: 'forwards'
+      });
+    setTimeout(function() {
+      element.remove();
+      fortuneAnime();
+    }, 1000);
+  }
+
+  function fortuneAnime() {
+    const key = Math.floor(Math.random() * results.length);
+    const fortune = document.getElementById("fortune");
+    fortune.src = "images/" + results[key];
+    fortune.animate(
+      [{
+        transform: 'translateY(0) scale(1)'
+      }, {
+        transform: 'translateY(-30px)'
+      }, {
+        transform: 'scale(1)'
+      }, {
+        transform: 'scale(1.1)'
+      }, {
+        transform: 'translateY(0) scale(1)'
+      }], {
+        duration: 1000,
+        fill: 'forwards'
+      });
+  } 
+  
+</script>
+
+</body>
+</html>
