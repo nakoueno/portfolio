@@ -1187,7 +1187,7 @@ body.fixed {
 }
 @media screen and (max-width: 767px) {
   #btn {
-    padding: 10px 120px;
+    padding: 10px 100px;
     margin-bottom: 20px;
   }
 }
