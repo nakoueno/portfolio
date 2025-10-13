@@ -960,12 +960,12 @@ body.fixed {
 	gap: 56px;
 	justify-content: center;
 	align-items: center;
-	padding: 180px 0;
+	padding: 190px 0 150px;
 	font-family: "Noto Serif JP", serif;
 	@include mq(sp) {
 		display: block;
 		text-align: center;
-		padding: 130px 0;
+		padding: 130px 0 100px;
 	}
 	&-mail {
 		z-index: 1;
@@ -1002,6 +1002,12 @@ body.fixed {
 			}
 		}
 	}
+}
+.footer__txt {
+	position: relative;
+	text-align: center;
+	padding: 10px 0;
+	color: var(--yellow);
 }
 #copy {
 	background-color: var(--orange);
