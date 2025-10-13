@@ -1130,7 +1130,6 @@ body.fixed {
 }
 
 .footer__txt {
-  position: relative;
   text-align: center;
   padding: 10px 0;
   color: var(--yellow);
