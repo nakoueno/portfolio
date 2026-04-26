@@ -99,10 +99,9 @@ img {
 }
 .header__bg {
   background-image: url("../images/bg_tulip.jpg");
-  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: fixed;
   opacity: 0.7;
@@ -125,8 +124,10 @@ img {
   height: 100vh;
   right: 0;
   padding: 50px 50px 0;
-  opacity: 0;
-  animation: txt 0.4s ease forwards;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation: txt 0.4s ease;
   animation-delay: 1s;
 }
 @media screen and (max-width: 767px) {
@@ -192,15 +193,15 @@ img {
   }
 }
 .hidden {
-  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
 .container {
   position: absolute;
   bottom: 23%;
   right: 7%;
-  /* 矢印のアニメーション部分 */
-  /* 矢印のアニメーション */
 }
 .container img {
   width: 130px;
@@ -216,7 +217,7 @@ img {
 }
 @media screen and (max-width: 620px) {
   .container {
-    bottom: 49%;
+    bottom: 45%;
   }
 }
 .container .scroll {
@@ -228,6 +229,9 @@ img {
   .container .scroll {
     right: 56%;
   }
+}
+.container {
+  /* 矢印のアニメーション部分 */
 }
 .container .scroll::before {
   animation: scroll 2s infinite;
@@ -247,6 +251,9 @@ img {
     height: 13px;
     width: 13px;
   }
+}
+.container {
+  /* 矢印のアニメーション */
 }
 @keyframes scroll {
   0% {
@@ -316,7 +323,7 @@ img {
     bottom: 18%;
   }
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1070px) {
   .ttl h1 {
     bottom: 6%;
   }
@@ -344,25 +351,24 @@ img {
 .about__inner {
   display: flex;
   padding: 30px 0 220px;
-  /* 画像の親要素のスタイル */
-  /* 画像のスタイル */
-  /* 2枚目の画像は最初裏返し */
-  /* hoverすると2枚とも回転 */
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1070px) {
   .about__inner {
     display: block;
-    padding: 100px 5% 110px;
+    padding: 100px 10% 110px;
   }
 }
 .about__inner-img {
-  width: 50%;
+  width: 30%;
   position: relative;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1070px) {
   .about__inner-img {
     width: 100%;
   }
+}
+.about__inner {
+  /* 画像の親要素のスタイル */
 }
 .about__inner__img {
   width: 300px;
@@ -371,11 +377,14 @@ img {
   transform-style: preserve-3d;
   transition: transform 0.7s;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1070px) {
   .about__inner__img {
     width: 240px;
     height: 300px;
   }
+}
+.about__inner {
+  /* 画像のスタイル */
 }
 .about__inner__img img {
   backface-visibility: hidden;
@@ -384,8 +393,14 @@ img {
   position: absolute;
   width: 100%;
 }
+.about__inner {
+  /* 2枚目の画像は最初裏返し */
+}
 .about__inner__img img:last-of-type {
   transform: rotateY(180deg);
+}
+.about__inner {
+  /* hoverすると2枚とも回転 */
 }
 .about__inner__img:hover {
   transform: rotateY(180deg);
@@ -395,19 +410,14 @@ img {
   height: auto;
   position: absolute;
   top: 0;
-  right: 60px;
+  right: -80px;
   z-index: 999;
   animation: rotateAnimation 10s linear infinite;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1070px) {
   .about__inner__img-deco {
     width: 100px;
-    right: 28%;
-  }
-}
-@media screen and (max-width: 710px) {
-  .about__inner__img-deco {
-    right: 23%;
+    right: 30%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -424,24 +434,26 @@ img {
   }
 }
 .about__inner-txt {
-  width: 50%;
+  width: 70%;
+  margin-left: 100px;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1070px) {
   .about__inner-txt {
     width: 100%;
-    text-align: center;
+    margin-left: 0;
   }
 }
 .about__inner-txt h2 {
   padding-top: 150px;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1070px) {
   .about__inner-txt h2 {
     padding-top: 20px;
+    text-align: center;
   }
 }
 .about__inner-txt p {
-  margin: 20px 0;
+  margin: 40px 0 20px;
 }
 
 .deco {
@@ -464,8 +476,8 @@ img {
   }
 }
 .deco-right {
-  bottom: -65px;
-  right: -8px;
+  bottom: -60px;
+  right: 0px;
   overflow: hidden;
 }
 @media screen and (max-width: 1450px) {
@@ -518,7 +530,7 @@ img {
 
 .deco-left {
   top: -65px;
-  left: -8px;
+  left: 0px;
   overflow: hidden;
   transform: rotate(180deg);
 }
@@ -582,7 +594,7 @@ img {
   left: 0;
   background-color: rgba(149, 185, 198, 0.65);
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1070px) {
   #skill h2 {
     text-align: center;
   }
@@ -593,11 +605,11 @@ img {
   padding: 180px 0;
 }
 .skill__inner h2 {
-  padding-bottom: 22px;
+  padding-bottom: 40px;
 }
 @media screen and (max-width: 1070px) {
   .skill__inner {
-    padding: 130px 5%;
+    padding: 130px 10%;
   }
 }
 .skill__inner-item {
@@ -640,7 +652,7 @@ img {
 .works__inner h2 {
   padding-top: 180px;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1070px) {
   .works__inner h2 {
     text-align: center;
   }
@@ -696,7 +708,7 @@ img {
 .works__inner-ttl {
   width: 100%;
   display: flex;
-  gap: 38px;
+  gap: 30px;
   align-items: center;
   margin-top: 150px;
 }
@@ -1054,6 +1066,56 @@ body.fixed {
   overflow: hidden;
 }
 
+#moodboard {
+  background-color: var(--orange);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.moodboard__inner {
+  padding: 180px 0;
+  text-align: center;
+  position: relative;
+}
+.moodboard__inner h2 {
+  padding-bottom: 22px;
+}
+@media screen and (max-width: 1070px) {
+  .moodboard__inner {
+    padding: 130px 5%;
+  }
+}
+.moodboard__inner .moodboard__inner-item {
+  position: relative;
+  height: 650px;
+}
+.moodboard__inner .ttl-main {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+}
+.moodboard__inner .ttl-sub {
+  max-width: 75%;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+}
+.moodboard__inner .moodboard__inner-move {
+  position: relative; /* 親要素を基準に絶対配置する */
+  width: 100%; /* コンテナ幅を100%に */
+  height: 500px; /* 高さ固定 */
+  overflow: hidden; /* はみ出す部分は非表示 */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #footer {
   position: relative;
   z-index: 0;
@@ -1082,7 +1144,7 @@ body.fixed {
   .footer__inner {
     display: block;
     text-align: center;
-    padding: 130px 0 100px;
+    padding: 130px 10% 100px;
   }
 }
 .footer__inner-mail {

@@ -18,6 +18,7 @@ jQuery(function() {
 });
 
 
+
 const slideSpeed = 11000;
 const swiper = new Swiper(".swiper", {
   centeredSlides: true, // 1枚目のスライドを中央にする
@@ -45,6 +46,27 @@ const swiper = new Swiper(".swiper", {
 });
 
 
+// const swiper = new Swiper(".swiper", {
+//   centeredSlides: true, // 1枚目のスライドを中央にする
+//   loop: true,
+//   spaceBetween: '1.8%',  // スライド間に5%の余白を設定
+//   speed: 600,
+//   allowTouchMove: true,
+//   slidesPerView: 1.5,
+//   breakpoints: {
+//     600: {
+//       slidesPerView: 2 // 768px以上のとき
+//     },
+//     1000: {
+//       slidesPerView: 3 // 1000px以上のとき
+//     },
+//     1450: {
+//       slidesPerView: 4 // 1450px以上のとき
+//     }
+//   }
+// });
+
+
 AOS.init({
   offset: 50,
   duration: 400,
@@ -67,6 +89,7 @@ $('.close-button, .overlay').click(function () {
   $(window).scrollTop(scrollPos); // 元の位置に戻す
   $('.overlay, .modal').fadeOut();
 });
+
 
 
 // 【404リダイレクト】
