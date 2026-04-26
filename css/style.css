@@ -355,7 +355,7 @@ img {
 @media screen and (max-width: 1070px) {
   .about__inner {
     display: block;
-    padding: 100px 10% 110px;
+    padding: 100px 8% 110px;
   }
 }
 .about__inner-img {
@@ -609,7 +609,7 @@ img {
 }
 @media screen and (max-width: 1070px) {
   .skill__inner {
-    padding: 130px 10%;
+    padding: 130px 8%;
   }
 }
 .skill__inner-item {
