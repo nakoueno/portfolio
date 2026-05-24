@@ -156,7 +156,7 @@ img {
 }
 .header__inner p {
   font-family: "franklin-gothic-atf", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: italic;
   font-size: 27px;
   color: var(--yellow);
@@ -215,7 +215,7 @@ img {
 .container .scroll {
   position: absolute;
   top: 30%;
-  left: 45%;
+  left: 44%;
 }
 @media screen and (max-width: 767px) {
   .container .scroll {

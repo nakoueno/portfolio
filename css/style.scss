@@ -159,7 +159,7 @@ img {
 		}
 		p {
 			font-family: "franklin-gothic-atf", sans-serif;
-			font-weight: 400;
+			font-weight: 300;
 			font-style: italic;
 			font-size: 27px;
 			color: var(--yellow);
@@ -218,7 +218,7 @@ img {
 	.scroll {
 		position: absolute;
 		top: 30%;
-		left: 45%;
+		left: 44%;
 		@include mq(sp) {
 			top: 20px;
 		}
