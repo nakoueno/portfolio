@@ -160,7 +160,7 @@ img {
   font-style: italic;
   font-size: 27px;
   color: var(--yellow);
-  line-height: 100%;
+  line-height: 1.2;
   top: 7%;
   right: 5%;
   margin-top: 30px;
@@ -200,34 +200,26 @@ img {
 
 .container {
   position: absolute;
-  bottom: 23%;
   right: 7%;
+  margin-top: 30px;
 }
 .container img {
   width: 130px;
   animation: rotateAnimation 13s linear infinite;
 }
 @media screen and (max-width: 767px) {
-  .container {
-    bottom: 44%;
-  }
   .container img {
     width: 90px;
   }
 }
-@media screen and (max-width: 620px) {
-  .container {
-    bottom: 45%;
-  }
-}
 .container .scroll {
   position: absolute;
-  bottom: 77%;
-  right: 58%;
+  top: 30%;
+  left: 45%;
 }
 @media screen and (max-width: 767px) {
   .container .scroll {
-    right: 56%;
+    top: 20px;
   }
 }
 .container {
@@ -238,13 +230,13 @@ img {
   border-bottom: 2px solid var(--yellow);
   border-left: 2px solid var(--yellow);
   content: "";
-  height: 20px;
+  height: 15px;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   top: 0;
-  width: 20px;
+  width: 15px;
 }
 @media screen and (max-width: 767px) {
   .container .scroll::before {
