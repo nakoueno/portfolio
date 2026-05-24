@@ -159,7 +159,7 @@ img {
 		}
 		p {
 			font-family: "franklin-gothic-atf", sans-serif;
-			font-weight: 300;
+			font-weight: 400;
 			font-style: italic;
 			font-size: 27px;
 			color: var(--yellow);
@@ -590,7 +590,7 @@ img {
 	p {
 		padding: 0 0;
 		line-height: 150%;
-		font-family: "Noto Serif JP", sans-serif;
+		font-family: "Noto San JP", sans-serif;
 	}
 	&-list {
 		display: flex;
@@ -627,6 +627,10 @@ img {
 		margin-top: 150px;
 		@media screen and (max-width:850px) {
 			margin-top: 100px;
+		}
+
+		p {
+			font-family: "Noto Serif JP", serif;
 		}
 	}
 	&-nmb > p{
@@ -845,6 +849,7 @@ img {
 		}
 		& > div {
 			max-width: 50%;
+			font-family: "Noto Sans JP", sans-serif;
 			img {
 				width: 100%;
 				padding-bottom: 10px;
@@ -864,14 +869,12 @@ img {
 				border-radius: 13px;
 				padding: 0 10px;
 				margin: 13px 0 7px;
-				font-family: "Noto Sans JP", sans-serif;
 			}
 			dd {
 				text-align: left;
 				float: left ;
 				padding: 0 10px;
 				margin: 13px 0 7px;
-				font-family: "Noto Sans JP", sans-serif;
 				@media screen and (max-width:530px) {
 					margin: 0 0 10px;
 				}
